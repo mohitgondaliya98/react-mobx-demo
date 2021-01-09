@@ -7,26 +7,13 @@ interface ToDoModel {
   IsCompleted?: boolean;
 }
 
-@observer
 export default class ToDoList extends React.Component<
-  { ToDos: ToDoModel[] },
+  { ToDos:any },
   {toDo:Array<any>}
     > {
-    componentDidMount() {
-        console.log("List")
-        this.setState({
-            toDo: this.props.ToDos
-        });
-    }
-    componentWillReceiveProps(props:any) {
-        this.setState({
-              toDo: this.props.ToDos,
-        });
-    
-    }   
     
     render() {
-        console.log(this.props.ToDos);
+     
     if (this.props.ToDos.length === 0) {
       return <div>Please add wishlist to get started</div>;
     }
@@ -38,7 +25,7 @@ export default class ToDoList extends React.Component<
         <div className="todoList">
           
 
-          {this.state.toDo.map((todo) => {
+          {this.props.ToDos.map((todo:any) => {
             return (
               <Row key={todo.ID} className="p-1">
                 <div className="todoItem col-md-8">{todo.Title}</div>

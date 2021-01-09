@@ -1,6 +1,6 @@
 import { inject, observer } from 'mobx-react';
 import * as React from 'react';
-import ToDoStore from '../store/NoteStore';
+import ToDoStore from '../../store/NoteStore';
 
 @inject('ToDoStore')
 @observer
@@ -14,10 +14,10 @@ export default class ToDoSummary extends React.Component<
       this.props.ToDoStore?.toDo.filter((x) => x.IsCompleted).length ?? 0;
 
     return (
-      <section style={{ fontSize: 'larger' }}>
-        ToDo status {totalToDos - completedToDos} ToDo(s) pending from{' '}
+      <div>
+         {totalToDos - completedToDos} ToDo(s) pending from{' '}
         {totalToDos} ToDo(s)
-      </section>
+      </div>
     );
   }
 }

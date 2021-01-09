@@ -1,8 +1,8 @@
 import React from 'react';
 import ToDoStore from "./store/NoteStore"
 import { Provider } from 'mobx-react';
-import ToDoComponent from './todoList/ToDoComponent';
-import ToDoSummary from './todoList/ToDoSummary';
+import ToDoComponent from './component/todoList/ToDoComponent';
+import ToDoSummary from './component/todoList/ToDoSummary';
 
 export default class App extends React.Component<{}, {}> {
   private todoStore: ToDoStore;
