@@ -3,7 +3,7 @@ import ToDoStore from "./store/NoteStore"
 import { Provider } from 'mobx-react';
 import ToDoComponent from './component/todoList/ToDoComponent';
 import ToDoSummary from './component/todoList/ToDoSummary';
-
+import home from "./component/home/home"
 export default class App extends React.Component<{}, {}> {
   private todoStore: ToDoStore;
 
@@ -19,11 +19,11 @@ export default class App extends React.Component<{}, {}> {
     return (
       <div className="App">
         <h3>ToDo App using React and Mobx</h3>
-
-         <Provider ToDoStore={this.todoStore}>
+          <home/>
+         {/* <Provider ToDoStore={this.todoStore}>
           <ToDoComponent />
           <ToDoSummary />
-        </Provider>
+        </Provider> */}
       </div>
     );
   }
