@@ -113,9 +113,11 @@ header .nav-brand img{ display: inline-block; vertical-align: top; }
 /* Homepage Banner
 --------------------------------------------------------------------------------------------------------*/
 .homepage-banner{ position: relative; padding: 120px 150px; }
-.homepage-banner::before{ content: ""; position: absolute; top: -70px; left: 0; width: 100%; height: 100%; z-index: -1; background: url('../images/homepage/home-banner-left.png') no-repeat left top; background-size: contain; }
-.homepage-banner h1{ color: #212121; max-width: 555px;z-index: 1; }
-.homepage-banner h1 + p{ color: #424242; font-size: 16px; line-height: 24px; max-width: 555px;z-index: 1; }
+.homepage-banner::before{ content: ""; position: absolute; top: -70px; left: 0; bottom: 0; width: 400px; z-index: -1; background: url('../images/homepage/home-banner-left.png') no-repeat left top; background-size: contain; }
+.homepage-banner h1{ color: #212121; max-width: 555px;}
+.homepage-banner h1 + p{ color: #424242; font-size: 16px; line-height: 24px; max-width: 555px;}
+
+
 
 /* Responsive Media Queries
 --------------------------------------------------------------------------------------------------------*/
