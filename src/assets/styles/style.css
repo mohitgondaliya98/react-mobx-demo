@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+/*
+------------------------------------------------------------
+Project Name : hubura;
+------------------------------------------------------------
+*/
+/* Reset
+--------------------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: ProximaNova-Light;
+    src: url('../font/ProximaNova-Light.woff');
+}
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url('../font/ProximaNova-Regular.woff');
+}
+@font-face {
+    font-family: ProximaNova-Semibold;
+    src: url('../font/ProximaNova-Semibold.woff');
+}
+@font-face {
+    font-family: ProximaNova-Bold;
+    src: url('../font/ProximaNova-Bold.woff');
+}
+
+/*
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+.react-loading-skeleton{ border-radius: 24px!important; }
+/* General
+--------------------------------------------------------------------------------------------------------*/
+* { outline: none !important; }
+.window-resizing *{transition: none!important; }
+a{transition: all 0.3s;}
+html, body { min-width: 320px; min-height: 100vh; }
+body { font-size: 16px; line-height: 22px; font-family: 'ProximaNova-Regular', sans-serif!important; -ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased; color: #5A5A5A;}
+.wrapper { min-height: 100vh; }
+a { color: #5A5A5A; text-decoration: none; }
+a:hover { color: #999; text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.2em; padding: 0 0 20px; }
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { display: block; }
+h1 {font-size: 64px; line-height: 70px;}
+h2 {font-size: 48px; line-height: 54px;}
+h3 {font-size: 40px; line-height: 48px;}
+h4 {font-size: 24px; line-height: 28px;}
+h4 {font-size: 22px; line-height: 26px;}
+h6 { font-size: 18px; line-height: 24px;}
+p { padding: 0 0 20px; }
+input[type=text], input[type=email], input[type=password], textarea { -webkit-appearance: none; appearance: none; }
+::-webkit-input-placeholder { color: #5A5A5A; }
+::-moz-placeholder { color: #5A5A5A; }
+:-ms-input-placeholder { color: #5A5A5A; }
+:-moz-placeholder { color: #5A5A5A; }
+::-moz-focus-inner { border: 0; }
+select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
+option:not(:checked) { color: black; }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.bold{font-weight: 700;}
+.extra-bold{font-weight: 800;}
+.black{font-weight: 900;}
+.cursor-pointer{cursor: pointer!important;}
+.fs-11{font-size: 11px; line-height: 15px;}
+.fs-12{font-size: 12px; line-height: 16px;}
+.fs-14{font-size: 14px; line-height: 20px;}
+
+.ProximaNova-Light{ font-family: ProximaNova-Light; font-weight: 300; }
+.ProximaNova-Regular{ font-family: ProximaNova-regular; font-weight: 400; }
+.ProximaNova-Semibold{ font-family: ProximaNova-Semibold; font-weight: 600; }
+.ProximaNova-Bold{ font-family: ProximaNova-Bold; font-weight: 700; }
+.lowercase{ text-transform: lowercase!important; }
+.uppercase{ text-transform: uppercase!important; }
+
+/* Form Elements
+--------------------------------------------------------------------------------------------------------*/
+.btn.MuiButton-root{ font-weight: 600; text-transform: uppercase; font-family: ProximaNova-Semibold; letter-spacing: 0; font-size: 14px; padding: 11px 20px; line-height: 18px; box-shadow: none!important; border-radius: 6px; }
+
+.MuiButton-containedPrimary{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; border-color: transparent!important;}
+.MuiButton-containedPrimary:hover{background-image: linear-gradient(106deg, #0b65b2, #302d89 99%)!important;}
+
+.MuiButton-text:hover{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important; }
+
+.btn-iconic-text{ display: flex; }
+
+.btn-lg{ font-size: 20px; line-height: 24px; padding: 12px 38px; }
+
+/* Header
+--------------------------------------------------------------------------------------------------------*/
+header{ padding: 15px 35px; }
+header .nav-brand{ display: inline-block; vertical-align: top; }
+header .nav-brand img{ display: inline-block; vertical-align: top; }
+
+
+/* Homepage Banner
+--------------------------------------------------------------------------------------------------------*/
+.homepage-banner{ position: relative; padding: 120px 150px; }
+.homepage-banner::before{ content: ""; position: absolute; top: -70px; left: 0; width: 100%; height: 100%; z-index: -1; background: url('../images/homepage/home-banner-left.png') no-repeat left top; background-size: contain; }
+.homepage-banner h1{ color: #212121; max-width: 555px;z-index: 1; }
+.homepage-banner h1 + p{ color: #424242; font-size: 16px; line-height: 24px; max-width: 555px;z-index: 1; }
+
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width:1600px) {
+}
+
+@media (max-width:1440px) {
+}
+
+@media (max-width:1199px) {
+}
+
+@media (max-width:991px) {
+}
+
+@media (max-width:767px) {
+}
+
+@media (max-width:575px) {
+}
+
+@media (max-width:375px) {
+}

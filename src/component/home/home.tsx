@@ -7,7 +7,7 @@ export default class Home extends React.Component<{classses?:any},null> {
     render() {
       return (
         <div >
-        Activity
+          Activity
         </div>
     );
   }
