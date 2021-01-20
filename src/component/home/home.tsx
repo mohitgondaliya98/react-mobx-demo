@@ -1,29 +1,14 @@
-import React, { Component } from 'react'
-import {withStyles} from "@material-ui/core"
-interface IProps{
-    classes?:any
-}
+import * as React from 'react';
+export default class Home extends React.Component<{classses?:any},null> {
+  constructor(props:any) {
+    super(props);
+  }
 
-export class home extends Component<IProps,null> {
     render() {
-        return (
-            <>
-                <div className={this.props.classes.itemContainer}>
-Activity list here
-                </div>
-                
-            </>
-        )
-    }
+      return (
+        <div >
+        Activity
+        </div>
+    );
+  }
 }
-
-const style = (theme: any) => ({
-  random: {
-    float: "right",
-  },
-  itemContainer: {
-   color:"#123"
-  },
-});
-
-export default withStyles(style)(home)
