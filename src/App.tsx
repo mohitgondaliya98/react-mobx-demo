@@ -50,10 +50,9 @@ export default class App extends React.Component<{}, {}> {
 
           {/* home page banner start */}
           <div className="homepage-banner">
-            <div className="container-xl">
               <h1 className="ProximaNova-Bold">Careers are built on networks.</h1>
               <p>If you’re looking for the latest in wireless headphones, look no further. These are perfect for TV, stereo, home, and cell phone.</p>
-            </div>
+              {/* <div className></div> */}
           </div>
           {/* home page banner end */}
 
