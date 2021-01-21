@@ -5,8 +5,14 @@ import "./assets/styles/bootstrap-grid.min.css"
 import "./assets/styles/style.css"
 import HomePage from './component/home/home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+
 import Button from '@material-ui/core/Button';
-import { FormControl, InputLabel, Menu, MenuItem, Select } from '@material-ui/core';
+import { FormControl, MenuItem, Select } from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
+
+import Slider from "react-slick";
+
 
 export default class App extends React.Component<{}, {}> {
   private todoStore: ToDoStore;
@@ -19,7 +25,17 @@ export default class App extends React.Component<{}, {}> {
   componentDidMount() {
     this.todoStore.getToDos();
   }
+
+  
   render() {
+    const settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      initialSlide: 0,
+    };
     return (
       <>
         <div className="wrapper">
@@ -28,6 +44,8 @@ export default class App extends React.Component<{}, {}> {
               <Route path={`${process.env.PUBLIC_URL}/`} exact component={HomePage} />
             </div>
           </Router> */}
+
+
           {/* header start */}
           <header>
             <div className="container-fluid px-0">
@@ -66,10 +84,9 @@ export default class App extends React.Component<{}, {}> {
 
 
           {/* How Hubura Works start */}
-
           <div className="how-habura-work">
             <div className="container-lg">
-              <h4 className="text-center ProximaNova-Bold mb-4">How Hubura Works</h4>
+              <h4 className="text-center ProximaNova-Bold pb-4">How Hubura Works</h4>
               <div className="row">
                 <div className="col-md-4">
                   <div className="how-habura-work-card">
@@ -83,7 +100,7 @@ export default class App extends React.Component<{}, {}> {
                   </div>
                 </div>
                 <div className="col-md-4">
-                   <div className="how-habura-work-card">
+                  <div className="how-habura-work-card">
                     <img src={require('../src/assets/images/homepage/create-job.svg').default} alt="" />
                     <h6 className="ProximaNova-Semibold">Create Jobs, Polls News &amp; Ads</h6>
                     <p>
@@ -94,7 +111,7 @@ export default class App extends React.Component<{}, {}> {
                   </div>
                 </div>
                 <div className="col-md-4">
-                   <div className="how-habura-work-card">
+                  <div className="how-habura-work-card">
                     <img src={require('../src/assets/images/homepage/business-job-search.svg').default} alt="" />
                     <h6 className="ProximaNova-Semibold">Find &amp; Apply to Jobs</h6>
                     <p>
@@ -107,9 +124,196 @@ export default class App extends React.Component<{}, {}> {
               </div>
             </div>
           </div>
-
           {/* How Hubura Works end */}
 
+          {/* How Habura Work start */}
+          <div className="why-people-love">
+            <div className="container-lg">
+              <h4 className="text-center ProximaNova-Bold pb-4 mb-3">Why People Love Hubura</h4>
+
+              <Slider className="how-habura-work-slider" {...settings}>
+                <div>
+                  <div className="organization-testimonial-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/facebook.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Facebook, <span>United States</span></p>
+                        <Rating name="read-only" value={3} readOnly />
+                      </div>
+                    </div>
+
+                    <p className="organization-review">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <span className="person-reviewed">Reviewed by john doe</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="organization-testimonial-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Airbnb, <span>California</span></p>
+                        <Rating name="read-only" value={4} readOnly />
+                      </div>
+                    </div>
+
+                    <p className="organization-review">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <span className="person-reviewed">Reviewed by john doe</span>
+                  </div>
+                </div>
+                <div>
+                  <div className="organization-testimonial-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/facebook.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Facebook, <span>United States</span></p>
+                        <Rating name="read-only" value={3} readOnly />
+                      </div>
+                    </div>
+
+                    <p className="organization-review">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <span className="person-reviewed">Reviewed by john doe</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="organization-testimonial-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Airbnb, <span>California</span></p>
+                        <Rating name="read-only" value={4} readOnly />
+                      </div>
+                    </div>
+
+                    <p className="organization-review">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <span className="person-reviewed">Reviewed by john doe</span>
+                  </div>
+                </div>
+                <div>
+                  <div className="organization-testimonial-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/facebook.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Facebook, <span>United States</span></p>
+                        <Rating name="read-only" value={3} readOnly />
+                      </div>
+                    </div>
+
+                    <p className="organization-review">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <span className="person-reviewed">Reviewed by john doe</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="organization-testimonial-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Airbnb, <span>California</span></p>
+                        <Rating name="read-only" value={4} readOnly />
+                      </div>
+                    </div>
+
+                    <p className="organization-review">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <span className="person-reviewed">Reviewed by john doe</span>
+                  </div>
+                </div>
+              </Slider>
+            </div>
+          </div>
+          {/* How Habura Work end */}
+
+
+          {/* Hot Jobs on Hubura start */}
+          <div className="hot-jobs-wrapper">
+            <div className="container-lg">
+              <h4 className="text-center ProximaNova-Bold pb-4 mb-3">Hot Jobs On Hubura</h4>
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Software Engineer</p>
+                        <span>Airbnb</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Software Engineer</p>
+                        <span>Airbnb</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Software Engineer</p>
+                        <span>Airbnb</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Software Engineer</p>
+                        <span>Airbnb</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Software Engineer</p>
+                        <span>Airbnb</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Software Engineer</p>
+                        <span>Airbnb</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          {/* Hot Jobs on Hubura end */}
 
         </div>
       </>
@@ -131,11 +335,12 @@ function Bannermenu() {
       <Select
         value={option}
         onChange={handleChange}
+        displayEmpty
         MenuProps={{
           disableScrollLock: true,
         }}
       >
-        <MenuItem value="">Select</MenuItem>
+        <MenuItem value="">Location</MenuItem>
         <MenuItem value={"Newyork"}>Newyork</MenuItem>
         <MenuItem value={"Sedney"}>Sedney</MenuItem>
         <MenuItem value={"India"}>India</MenuItem>
