@@ -1,20 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="136" height="39" viewBox="0 0 136 39">
-    <g fill="none" fill-rule="evenodd">
-        <g>
-            <g>
-                <g>
-                    <g fill="#323441" font-family="CircularStd-Medium, Circular Std" font-size="28" font-weight="400">
-                        <text transform="translate(-50 -16) translate(50 15) translate(0 1.127) translate(45 3.873)">
-                            <tspan x="0" y="28">hubura</tspan>
-                        </text>
-                    </g>
-                    <g transform="translate(-50 -16) translate(50 15) translate(0 1.127)">
-                        <path fill="#110F57" d="M17.5 0C27.165 0 35 7.835 35 17.5c0 6.443-5.719 13.192-17.157 20.245C5.948 30.692 0 23.943 0 17.5 0 7.835 7.835 0 17.5 0zm.343 5.147c-6.443 0-11.667 5.223-11.667 11.667 0 6.443 5.224 11.666 11.667 11.666S29.51 23.257 29.51 16.814c0-6.444-5.224-11.667-11.667-11.667z"/>
-                        <circle cx="17.843" cy="17.843" r="2.745" fill="#00005C"/>
-                        <path fill="#009FFF" d="M17.5 9.608c3.98 0 7.206 3.226 7.206 7.206 0 3.98-3.226 7.206-7.206 7.206-3.98 0-7.206-3.227-7.206-7.206 0-3.98 3.226-7.206 7.206-7.206zm.343 5.49c-1.516 0-2.745 1.23-2.745 2.745 0 1.516 1.229 2.745 2.745 2.745s2.745-1.229 2.745-2.745-1.23-2.745-2.745-2.745z"/>
-                    </g>
-                </g>
-            </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 136 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,2.50195,0.5005)">
+        <g transform="matrix(1,0,0,1,45,28.8569)">
+            <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:28px;fill:rgb(50,52,65);">hubura</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,0.127)">
+            <path d="M17.5,0C27.165,0 35,7.835 35,17.5C35,23.943 29.281,30.692 17.843,37.745C5.948,30.692 0,23.943 0,17.5C0,7.835 7.835,0 17.5,0ZM17.843,5.147C11.4,5.147 6.176,10.37 6.176,16.814C6.176,23.257 11.4,28.48 17.843,28.48C24.286,28.48 29.51,23.257 29.51,16.814C29.51,10.37 24.286,5.147 17.843,5.147Z" style="fill:rgb(17,15,87);"/>
+            <circle cx="17.843" cy="17.843" r="2.745" style="fill:rgb(0,0,92);"/>
+            <path d="M17.5,9.608C21.48,9.608 24.706,12.834 24.706,16.814C24.706,20.794 21.48,24.02 17.5,24.02C13.52,24.02 10.294,20.793 10.294,16.814C10.294,12.834 13.52,9.608 17.5,9.608ZM17.843,15.098C16.327,15.098 15.098,16.328 15.098,17.843C15.098,19.359 16.327,20.588 17.843,20.588C19.359,20.588 20.588,19.359 20.588,17.843C20.588,16.327 19.358,15.098 17.843,15.098Z" style="fill:rgb(0,159,255);"/>
         </g>
     </g>
 </svg>

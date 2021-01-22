@@ -81,7 +81,7 @@ export default class App extends React.Component<{}, {}> {
 
           {/* How Hubura Works start */}
           <div className="how-habura-work">
-            <div className="container-lg">
+            <div className="container-xl">
               <h4 className="text-center ProximaNova-Bold pb-4">How Hubura Works</h4>
               <div className="row">
                 <div className="col-md-4">
@@ -124,7 +124,7 @@ export default class App extends React.Component<{}, {}> {
 
           {/* How Habura Work start */}
           <div className="why-people-love">
-            <div className="container-lg">
+            <div className="container-xl">
               <h4 className="text-center ProximaNova-Bold pb-4 mb-3">Why People Love Hubura</h4>
 
               <Slider className="how-habura-work-slider" {...settings}>
@@ -209,7 +209,7 @@ export default class App extends React.Component<{}, {}> {
 
           {/* Hot Jobs on Hubura start */}
           <div className="hot-jobs-wrapper">
-            <div className="container-lg">
+            <div className="container-xl">
               <h4 className="text-center ProximaNova-Bold pb-4 mb-3">Hot Jobs On Hubura</h4>
               <div className="row">
                 <div className="col-md-4">
@@ -297,7 +297,7 @@ export default class App extends React.Component<{}, {}> {
 
           {/* Benifits of Habura start */}
           <div className="benifits-habura-wrapper">
-            <div className="container-lg">
+            <div className="container-xl">
               <div className="row">
                 <div className="col-lg-4">
                   <div className="row">
@@ -312,46 +312,96 @@ export default class App extends React.Component<{}, {}> {
                       <img className="benifits-habura-img" src={require('../src/assets/images/homepage/benifits-habura.svg').default} alt="" />
                     </div>
                   </div>
-                  </div>
-                  <div className="col-lg-8">
-                    <div className="row benifits-habura-card-wrapper">
-                      <div className="col-md-6">
-                        <div className="benifits-habura-card">
-                          <img src={require('../src/assets/images/homepage/easy-job-apply.svg').default} alt="" />
-                          <h6 className="ProximaNova-Semibold">Easy job apply</h6>
-                          <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="benifits-habura-card">
-                          <img src={require('../src/assets/images/homepage/improve-productivity.svg').default} alt="" />
-                          <h6 className="ProximaNova-Semibold">Improve the productivity</h6>
-                          <p>It's the details that make Dummy such a winner. By way of comparison, consider last summer's "My Big Fat Greek Wedding," in which each actor put a heartfelt spin on his or her one-joke character (the father who believes.</p>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="benifits-habura-card">
-                          <img src={require('../src/assets/images/homepage/discover-people.svg').default} alt="" />
-                          <h6 className="ProximaNova-Semibold">Discover the people</h6>
-                          <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="benifits-habura-card">
-                          <img src={require('../src/assets/images/homepage/create-company-profile.svg').default} alt="" />
-                          <h6 className="ProximaNova-Semibold">Create company profile</h6>
-                          <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-                        </div>
+                </div>
+                <div className="col-lg-8">
+                  <div className="row benifits-habura-card-wrapper">
+                    <div className="col-md-6">
+                      <div className="benifits-habura-card">
+                        <img src={require('../src/assets/images/homepage/easy-job-apply.svg').default} alt="" />
+                        <h6 className="ProximaNova-Semibold">Easy job apply</h6>
+                        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
                       </div>
                     </div>
+                    <div className="col-md-6">
+                      <div className="benifits-habura-card">
+                        <img src={require('../src/assets/images/homepage/improve-productivity.svg').default} alt="" />
+                        <h6 className="ProximaNova-Semibold">Improve the productivity</h6>
+                        <p>It's the details that make Dummy such a winner. By way of comparison, consider last summer's "My Big Fat Greek Wedding," in which each actor put a heartfelt spin on his or her one-joke character (the father who believes.</p>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="benifits-habura-card">
+                        <img src={require('../src/assets/images/homepage/discover-people.svg').default} alt="" />
+                        <h6 className="ProximaNova-Semibold">Discover the people</h6>
+                        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="benifits-habura-card">
+                        <img src={require('../src/assets/images/homepage/create-company-profile.svg').default} alt="" />
+                        <h6 className="ProximaNova-Semibold">Create company profile</h6>
+                        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           {/* Benifits of Habura end */}
 
-
         </div>
+
+        <footer>
+          <div className="primary-footer">
+            <div className="container-xl">
+              <div className="row">
+                <div className="col-auto">
+                  <a href="#" className="nav-brand">
+                    <img src={require('../src/assets/images/logo.svg').default} alt="" />
+                  </a>
+                </div>
+                <div className="col">
+                  <ul className="footer-links">
+                    <li>
+                      <a href="#" title="Privacy Policy">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#" title="Terms and Conditions">Terms and Conditions</a>
+                    </li>
+                    <li>
+                      <a href="#" title="Cookie Policy">Cookie Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="secondary-footer">
+            <div className="container-xl">
+              <div className="row">
+                <div className="col-auto">
+                  <p>&copy; Hubura. All Rights Reserved</p>
+                </div>
+                <div className="col">
+
+                  <ul className="social-links">
+                    <li>
+                      <a href="#" title="Facebook">
+                        <img src={require('../src/assets/images/facebook.svg').default} alt="facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" title="Linkedin">
+                        <img src={require('../src/assets/images/linkedin.svg').default} alt="linkedin" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </>
     );
   }
