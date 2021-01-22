@@ -26,7 +26,7 @@ export default class App extends React.Component<{}, {}> {
     this.todoStore.getToDos();
   }
 
-  
+
   render() {
     const settings = {
       dots: true,
@@ -39,16 +39,10 @@ export default class App extends React.Component<{}, {}> {
     return (
       <>
         <div className="wrapper">
-          {/* <Router>
-            <div className="wrapper">
-              <Route path={`${process.env.PUBLIC_URL}/`} exact component={HomePage} />
-            </div>
-          </Router> */}
-
 
           {/* header start */}
           <header>
-            <div className="container-fluid px-0">
+            <div className="container-xl px-0">
               <div className="row">
                 <div className="col">
                   <a href="#" className="nav-brand">
@@ -69,15 +63,17 @@ export default class App extends React.Component<{}, {}> {
 
           {/* home page banner start */}
           <div className="homepage-banner">
-            <h1 className="ProximaNova-Bold">Careers are built on networks.</h1>
-            <p>If you’re looking for the latest in wireless headphones, look no further. These are perfect for TV, stereo, home, and cell phone.</p>
-            <div className="banner-search">
-              <div className="banner-select-search">
-                <img className="location" src={require('../src/assets/images/location-primary.svg').default} alt="" />
-                <Bannermenu></Bannermenu>
-                <input type="text" className="" placeholder="Search Users/Companies/Jobs" />
+            <div className="container-xl">
+              <h1 className="ProximaNova-Bold">Careers are built on networks.</h1>
+              <p>If you’re looking for the latest in wireless headphones, look no further. These are perfect for TV, stereo, home, and cell phone.</p>
+              <div className="banner-search">
+                <div className="banner-select-search">
+                  <img className="location" src={require('../src/assets/images/location-primary.svg').default} alt="" />
+                  <Bannermenu></Bannermenu>
+                  <input type="text" className="" placeholder="Search Users/Companies/Jobs" />
+                </div>
+                <Button className="btn btn-iconic-text ms-2" variant="contained" color="primary"><span>Start now</span><img className="ms-2" src={require('../src/assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
               </div>
-              <Button className="btn btn-iconic-text ms-2" variant="contained" color="primary"><span>Start now</span><img className="ms-2" src={require('../src/assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
             </div>
           </div>
           {/* home page banner end */}
@@ -205,20 +201,6 @@ export default class App extends React.Component<{}, {}> {
                   </div>
                 </div>
 
-                <div>
-                  <div className="organization-testimonial-card">
-                    <div className="organization-details">
-                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
-                      <div>
-                        <p>Airbnb, <span>California</span></p>
-                        <Rating name="read-only" value={4} readOnly />
-                      </div>
-                    </div>
-
-                    <p className="organization-review">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
-                    <span className="person-reviewed">Reviewed by john doe</span>
-                  </div>
-                </div>
               </Slider>
             </div>
           </div>
@@ -246,10 +228,49 @@ export default class App extends React.Component<{}, {}> {
                 <div className="col-md-4">
                   <div className="hot-job-card">
                     <div className="organization-details">
-                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <i><img src={require('../src/assets/images/homepage/amazon.jpg').default} alt="" /></i>
                       <div>
-                        <p>Software Engineer</p>
-                        <span>Airbnb</span>
+                        <p>Business executive</p>
+                        <span>Amazon</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/zomato.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Business Lead</p>
+                        <span>Zomato</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/swiggy.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Product Manager</p>
+                        <span>Swiggy</span>
+                      </div>
+                    </div>
+                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
+                    <Button variant="outlined" color="primary">Apply Now</Button>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="hot-job-card">
+                    <div className="organization-details">
+                      <i><img src={require('../src/assets/images/homepage/tesla.jpg').default} alt="" /></i>
+                      <div>
+                        <p>Marketing</p>
+                        <span>Tesla</span>
                       </div>
                     </div>
                     <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
@@ -261,7 +282,7 @@ export default class App extends React.Component<{}, {}> {
                     <div className="organization-details">
                       <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
                       <div>
-                        <p>Software Engineer</p>
+                        <p>Juniour Developer</p>
                         <span>Airbnb</span>
                       </div>
                     </div>
@@ -269,51 +290,66 @@ export default class App extends React.Component<{}, {}> {
                     <Button variant="outlined" color="primary">Apply Now</Button>
                   </div>
                 </div>
-                <div className="col-md-4">
-                  <div className="hot-job-card">
-                    <div className="organization-details">
-                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
-                      <div>
-                        <p>Software Engineer</p>
-                        <span>Airbnb</span>
-                      </div>
-                    </div>
-                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
-                    <Button variant="outlined" color="primary">Apply Now</Button>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="hot-job-card">
-                    <div className="organization-details">
-                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
-                      <div>
-                        <p>Software Engineer</p>
-                        <span>Airbnb</span>
-                      </div>
-                    </div>
-                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
-                    <Button variant="outlined" color="primary">Apply Now</Button>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="hot-job-card">
-                    <div className="organization-details">
-                      <i><img src={require('../src/assets/images/homepage/airbnb.jpg').default} alt="" /></i>
-                      <div>
-                        <p>Software Engineer</p>
-                        <span>Airbnb</span>
-                      </div>
-                    </div>
-                    <p className="job-description">Adrien Brody and Milla Jovovich, "Dummy" is that special kind of indie comedy that knows how to perfectly balance its offbeat humor with just the right amount of dramatic intrigue.</p>
-                    <Button variant="outlined" color="primary">Apply Now</Button>
-                  </div>
-                </div>
-
-
               </div>
             </div>
           </div>
           {/* Hot Jobs on Hubura end */}
+
+          {/* Benifits of Habura start */}
+          <div className="benifits-habura-wrapper">
+            <div className="container-lg">
+              <div className="row">
+                <div className="col-lg-4">
+                  <div className="row">
+                    <div className="col-lg-12 col-md-6">
+                      <div className="benifits-habura-info">
+                        <h4 className="ProximaNova-Bold pb-4">Benefits of Hubura</h4>
+                        <p>The Interference of Functional of the
+              Capacity (Kasey Ahern in The Book of the Valuable Information) One of the most striking features of this problem is that concentration of the qualification be the goals of candidate.</p>
+                      </div>
+                    </div>
+                    <div className="col-lg-12 col-md-6">
+                      <img className="benifits-habura-img" src={require('../src/assets/images/homepage/benifits-habura.svg').default} alt="" />
+                    </div>
+                  </div>
+                  </div>
+                  <div className="col-lg-8">
+                    <div className="row benifits-habura-card-wrapper">
+                      <div className="col-md-6">
+                        <div className="benifits-habura-card">
+                          <img src={require('../src/assets/images/homepage/easy-job-apply.svg').default} alt="" />
+                          <h6 className="ProximaNova-Semibold">Easy job apply</h6>
+                          <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="benifits-habura-card">
+                          <img src={require('../src/assets/images/homepage/improve-productivity.svg').default} alt="" />
+                          <h6 className="ProximaNova-Semibold">Improve the productivity</h6>
+                          <p>It's the details that make Dummy such a winner. By way of comparison, consider last summer's "My Big Fat Greek Wedding," in which each actor put a heartfelt spin on his or her one-joke character (the father who believes.</p>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="benifits-habura-card">
+                          <img src={require('../src/assets/images/homepage/discover-people.svg').default} alt="" />
+                          <h6 className="ProximaNova-Semibold">Discover the people</h6>
+                          <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="benifits-habura-card">
+                          <img src={require('../src/assets/images/homepage/create-company-profile.svg').default} alt="" />
+                          <h6 className="ProximaNova-Semibold">Create company profile</h6>
+                          <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Benifits of Habura end */}
+
 
         </div>
       </>
@@ -329,7 +365,6 @@ function Bannermenu() {
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setOption(event.target.value as string);
   };
-
   return (
     <FormControl className="country-select">
       <Select
