@@ -5,6 +5,10 @@
 Project Name : hubura;
 ------------------------------------------------------------
 */
+@import url('../../../node_modules/aos/dist/aos.css');
+
+
+
 /* Reset
 --------------------------------------------------------------------------------------------------------*/
 
@@ -159,7 +163,7 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 .homepage-banner::before{ content: ""; position: absolute; top: -70px; left: 0; bottom: 0; width: 300px; z-index: -1; background: url('../images/homepage/home-banner-left.png') no-repeat left top; background-size: contain; }
 .homepage-banner .container-xl{ position: relative; }
 .homepage-banner .container-xl::after{ content: ""; position: absolute; top: 0; right: 55px; bottom: 0; width: 542px; height: 300px; z-index: -1; background: url('../images/homepage/home-banner.svg') no-repeat left top; background-size: contain; }
-.homepage-banner h1{ color: #212121; max-width: 555px;}
+.homepage-banner h1{ color: #212121; max-width: 555px; min-height: 160px; }
 .homepage-banner h1 + p{ color: #424242; font-size: 16px; line-height: 24px; max-width: 555px;}
 
 /* Banner Search */
@@ -181,7 +185,6 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 .banner-search .MuiFormControl-root.country-select{ min-width: 100px; max-width: 130px; }
 .banner-search .MuiFormControl-root.country-select .MuiSelect-icon{ background: url('../images/chevron-down-dark.svg') no-repeat center; background-size: 16px 16px; transition: all 0.2s ease-in-out; }
 .banner-search .MuiFormControl-root.country-select .MuiSelect-icon path{ display: none; }
-
 
 /* how-habura-work */
 .how-habura-work{ text-align: center; margin: 0 125px 60px; }
@@ -207,19 +210,15 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 
 .organization-testimonial-card{ display: block; padding: 30px; cursor: pointer; border-radius: 10px; background-color: #ffffff; border: 1px solid #e4e4e4; text-align: left; margin: 15px; transition: all 0.3s ease; }
 .organization-testimonial-card:hover{ border-color: transparent; box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); }
-
 .organization-testimonial-card .organization-details{ margin-bottom: 12px; }
 .organization-testimonial-card .organization-details i{ display: inline-block; vertical-align: top; width: 62px; height: 62px; border-radius: 50%; overflow: hidden; }
 .organization-testimonial-card .organization-details i img{ max-width: 100%;display: inline-block; vertical-align: top; width: 62px; height: 62px; }
 .organization-testimonial-card .organization-details div{ display: inline-block; vertical-align: top; padding: 5px 20px; }
 .organization-testimonial-card .organization-details div p{ font-size: 22px; line-height: 26px; color: #212121; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 0; margin-bottom: 4px; }
 .organization-testimonial-card .organization-details div p span{ font-size: 18px; line-height: 22px; font-family: ProximaNova-Regular; font-weight: 400;  }
-
 .organization-testimonial-card .organization-details div .MuiRating-root{ color: #ffad52; }
 .organization-testimonial-card .organization-details div .MuiRating-readOnly span .MuiSvgIcon-root{ width: 18px; height: 18px; }
 .organization-testimonial-card .organization-review{ padding: 0; font-size: 18px; line-height: 28px; color: #424242; margin-bottom: 55px; }
-
-
 
 /* hot-jobs-wrapper */
 .hot-jobs-wrapper{ text-align: center; margin: 0 125px 60px; }
@@ -270,8 +269,6 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 
 @media (max-width:1440px) {
     .homepage-banner{ padding: 80px 40px 120px; }
-    /* .homepage-banner .container-xl::after{ top: auto; bottom: 0; } */
-
     .why-people-love{ padding: 0 15px 80px; margin-top: 0; }
     .how-habura-work-slider.slick-slider .slick-dots{ left: 0; }
     .how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -30px; }
@@ -338,8 +335,6 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 
     .hot-job-card{ margin-bottom: 20px; }
 
-
-
     .benifits-habura-card-wrapper .benifits-habura-card{ padding: 20px; margin-bottom: 20px; }
     .benifits-habura-card-wrapper .benifits-habura-card p{ line-height: 24px; font-size: 15px; }
     .benifits-habura-card-wrapper .benifits-habura-card img{ width: 54px; height: 54px; margin: 0 0 15px; }
@@ -385,8 +380,4 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     footer .primary-footer .footer-links li + li{ margin-left: 0; }
     footer .primary-footer .footer-links li{ margin: 2px 12px 2px 0; } 
     footer .secondary-footer .social-links{ justify-content: center; }
-}
-
-@media (max-width:375px) {
-   
 }

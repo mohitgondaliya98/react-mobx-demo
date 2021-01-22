@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
-
 import Button from '@material-ui/core/Button';
 import { FormControl, MenuItem, Select } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
-
+import AOS from 'aos';
+import { gsap } from "gsap";
+import { Tween, Reveal } from "react-gsap";
+import { TextPlugin } from "gsap/TextPlugin";
 import Slider from "react-slick";
 
-
 export class home extends Component {
+
   render() {
+
+    AOS.init();
+    gsap.registerPlugin(TextPlugin);
+
     const settings = {
       dots: true,
       infinite: true,
@@ -68,7 +74,16 @@ export class home extends Component {
           {/* home page banner start */}
           <div className="homepage-banner">
             <div className="container-xl">
-              <h1 className="ProximaNova-Bold">Careers are built on networks.</h1>
+              <Reveal>
+                <Tween
+                  to={{ text: "Careers are built on networks." }}
+                  duration={2}
+                  ease="none"
+                >
+                  <h1 className="ProximaNova-Bold"></h1>
+                </Tween>
+              </Reveal>
+              {/* <h1 ></h1> */}
               <p>If you’re looking for the latest in wireless headphones, look no further. These are perfect for TV, stereo, home, and cell phone.</p>
               <div className="banner-search d-md-flex d-none">
                 <div className="banner-select-search">
@@ -94,8 +109,6 @@ export class home extends Component {
                   </div>
                 </div>
               </div>
-
-
             </div>
           </div>
           {/* home page banner end */}
@@ -106,36 +119,54 @@ export class home extends Component {
               <h4 className="text-center ProximaNova-Bold pb-4">How Hubura Works</h4>
               <div className="row">
                 <div className="col-md-4">
-                  <div className="how-habura-work-card">
+                  <div className="how-habura-work-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-200"
+                    data-aos-delay="50"
+                    data-aos-duration="200"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <img src={require('../../assets/images/homepage/newspaper.svg').default} alt="" />
                     <h6 className="ProximaNova-Semibold">Discover Articles, News &amp; Posts</h6>
                     <p>
                       Doubtless, a common action of the advantage of the specific decisions
                       ensures integrity of The Communication
-                      of Stable Manner.
-</p>
+                      of Stable Manner.</p>
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="how-habura-work-card">
+                  <div className="how-habura-work-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-200"
+                    data-aos-delay="50"
+                    data-aos-duration="400"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <img src={require('../../assets/images/homepage/create-job.svg').default} alt="" />
                     <h6 className="ProximaNova-Semibold">Create Jobs, Polls News &amp; Ads</h6>
                     <p>
                       Doubtless, a common action of the advantage of the specific decisions
                       ensures integrity of The Communication
-                      of Stable Manner.
-</p>
+                      of Stable Manner.</p>
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="how-habura-work-card">
+                  <div className="how-habura-work-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-200"
+                    data-aos-delay="50"
+                    data-aos-duration="600"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <img src={require('../../assets/images/homepage/business-job-search.svg').default} alt="" />
                     <h6 className="ProximaNova-Semibold">Find &amp; Apply to Jobs</h6>
                     <p>
                       Doubtless, a common action of the advantage of the specific decisions
                       ensures integrity of The Communication
-                      of Stable Manner.
-</p>
+                      of Stable Manner.</p>
                   </div>
                 </div>
               </div>
@@ -207,7 +238,7 @@ export class home extends Component {
                     <span className="person-reviewed">Reviewed by john doe</span>
                   </div>
                 </div>
-                
+
                 <div>
                   <div className="organization-testimonial-card">
                     <div className="organization-details">
@@ -234,7 +265,14 @@ export class home extends Component {
               <h4 className="text-center ProximaNova-Bold pb-4 mb-3">Hot Jobs On Hubura</h4>
               <div className="row">
                 <div className="col-md-4 col-sm-6">
-                  <div className="hot-job-card">
+                  <div className="hot-job-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-100"
+                    data-aos-delay="0"
+                    data-aos-duration="200"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/airbnb.jpg').default} alt="" /></i>
                       <div>
@@ -247,7 +285,14 @@ export class home extends Component {
                   </div>
                 </div>
                 <div className="col-md-4 col-sm-6">
-                  <div className="hot-job-card">
+                  <div className="hot-job-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-100"
+                    data-aos-delay="0"
+                    data-aos-duration="400"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/amazon.jpg').default} alt="" /></i>
                       <div>
@@ -260,7 +305,14 @@ export class home extends Component {
                   </div>
                 </div>
                 <div className="col-md-4 col-sm-6">
-                  <div className="hot-job-card">
+                  <div className="hot-job-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-100"
+                    data-aos-delay="0"
+                    data-aos-duration="600"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/zomato.jpg').default} alt="" /></i>
                       <div>
@@ -273,7 +325,14 @@ export class home extends Component {
                   </div>
                 </div>
                 <div className="col-md-4 col-sm-6">
-                  <div className="hot-job-card">
+                  <div className="hot-job-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-100"
+                    data-aos-delay="0"
+                    data-aos-duration="800"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/swiggy.jpg').default} alt="" /></i>
                       <div>
@@ -286,7 +345,14 @@ export class home extends Component {
                   </div>
                 </div>
                 <div className="col-md-4 col-sm-6">
-                  <div className="hot-job-card">
+                  <div className="hot-job-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-100"
+                    data-aos-delay="0"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/tesla.jpg').default} alt="" /></i>
                       <div>
@@ -299,7 +365,14 @@ export class home extends Component {
                   </div>
                 </div>
                 <div className="col-md-4 col-sm-6">
-                  <div className="hot-job-card">
+                  <div className="hot-job-card"
+                    data-aos="fade-up"
+                    data-aos-offset="-100"
+                    data-aos-delay="0"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/airbnb.jpg').default} alt="" /></i>
                       <div>
@@ -323,7 +396,14 @@ export class home extends Component {
                 <div className="col-lg-4">
                   <div className="row">
                     <div className="col-lg-12 col-sm-6 d-flex align-items-center">
-                      <div className="benifits-habura-info">
+                      <div className="benifits-habura-info"
+                        data-aos="fade-up"
+                        data-aos-offset="-200"
+                        data-aos-delay="50"
+                        data-aos-duration="200"
+                        data-aos-easing="ease-in-out"
+                        data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <h4 className="ProximaNova-Bold pb-4">Benefits of Hubura</h4>
                         <p>The Interference of Functional of the Capacity (Kasey Ahern in The Book of the Valuable Information) One of the most striking features of this problem is that concentration of the qualification be the goals of candidate.</p>
                       </div>
@@ -336,28 +416,56 @@ export class home extends Component {
                 <div className="col-lg-8">
                   <div className="row benifits-habura-card-wrapper">
                     <div className="col-sm-6">
-                      <div className="benifits-habura-card">
+                      <div className="benifits-habura-card"
+                        data-aos="fade-up"
+                        data-aos-offset="-200"
+                        data-aos-delay="50"
+                        data-aos-duration="400"
+                        data-aos-easing="ease-in-out"
+                        data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <img src={require('../../assets/images/homepage/easy-job-apply.svg').default} alt="" />
                         <h6 className="ProximaNova-Semibold">Easy job apply</h6>
                         <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
                       </div>
                     </div>
                     <div className="col-sm-6">
-                      <div className="benifits-habura-card">
+                      <div className="benifits-habura-card"
+                        data-aos="fade-up"
+                        data-aos-offset="-200"
+                        data-aos-delay="50"
+                        data-aos-duration="600"
+                        data-aos-easing="ease-in-out"
+                        data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <img src={require('../../assets/images/homepage/improve-productivity.svg').default} alt="" />
                         <h6 className="ProximaNova-Semibold">Improve the productivity</h6>
                         <p>It's the details that make Dummy such a winner. By way of comparison, consider last summer's "My Big Fat Greek Wedding," in which each actor put a heartfelt spin on his or her one-joke character (the father who believes.</p>
                       </div>
                     </div>
                     <div className="col-sm-6">
-                      <div className="benifits-habura-card">
+                      <div className="benifits-habura-card"
+                        data-aos="fade-up"
+                        data-aos-offset="-200"
+                        data-aos-delay="50"
+                        data-aos-duration="800"
+                        data-aos-easing="ease-in-out"
+                        data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <img src={require('../../assets/images/homepage/discover-people.svg').default} alt="" />
                         <h6 className="ProximaNova-Semibold">Discover the people</h6>
                         <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
                       </div>
                     </div>
                     <div className="col-sm-6">
-                      <div className="benifits-habura-card">
+                      <div className="benifits-habura-card"
+                        data-aos="fade-up"
+                        data-aos-offset="-200"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out"
+                        data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <img src={require('../../assets/images/homepage/create-company-profile.svg').default} alt="" />
                         <h6 className="ProximaNova-Semibold">Create company profile</h6>
                         <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
