@@ -6,6 +6,7 @@ import "./assets/styles/style.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './component/home/home';
 import Privacy from './component/privacy/privacyPolicy';
+import TermCondition from './component/term-and-condition/termCondition';
 
 export default class App extends React.Component<{}, {}> {
   private todoStore: ToDoStore;
@@ -27,7 +28,8 @@ export default class App extends React.Component<{}, {}> {
         <Router>
           <Switch>
             <Route exact path="/" component={(props: any) => <HomePage />} />
-            <Route exact path="/privacy" component={(props: any) => <Privacy />} />
+            <Route exact path="/privacy-policy" component={(props: any) => <Privacy />} />
+            <Route exact path="/term-and-condition" component={(props: any) => <TermCondition />} />
           </Switch>
         </Router>
       </>

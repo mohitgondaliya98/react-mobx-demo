@@ -27,7 +27,7 @@ export class home extends Component {
             <div className="container-xl px-0">
               <div className="row">
                 <div className="col">
-                  <a href="#" className="nav-brand">
+                  <a href="/" className="nav-brand">
                     <img src={require('../../assets/images/logo.svg').default} alt="" />
                   </a>
                 </div>
@@ -157,9 +157,9 @@ export class home extends Component {
                 <div>
                   <div className="organization-testimonial-card">
                     <div className="organization-details">
-                      <i><img src={require('../../assets/images/homepage/facebook.jpg').default} alt="" /></i>
+                      <i><img src={require('../../assets/images/homepage/swiggy.jpg').default} alt="" /></i>
                       <div>
-                        <p>Facebook, <span>United States</span></p>
+                        <p>Swiggy, <span>India</span></p>
                         <Rating name="read-only" value={3} readOnly />
                       </div>
                     </div>
@@ -172,9 +172,9 @@ export class home extends Component {
                 <div>
                   <div className="organization-testimonial-card">
                     <div className="organization-details">
-                      <i><img src={require('../../assets/images/homepage/airbnb.jpg').default} alt="" /></i>
+                      <i><img src={require('../../assets/images/homepage/amazon.jpg').default} alt="" /></i>
                       <div>
-                        <p>Airbnb, <span>California</span></p>
+                        <p>Amazon, <span>California</span></p>
                         <Rating name="read-only" value={4} readOnly />
                       </div>
                     </div>
@@ -183,13 +183,14 @@ export class home extends Component {
                     <span className="person-reviewed">Reviewed by john doe</span>
                   </div>
                 </div>
+                
                 <div>
                   <div className="organization-testimonial-card">
                     <div className="organization-details">
-                      <i><img src={require('../../assets/images/homepage/facebook.jpg').default} alt="" /></i>
+                      <i><img src={require('../../assets/images/homepage/zomato.jpg').default} alt="" /></i>
                       <div>
-                        <p>Facebook, <span>United States</span></p>
-                        <Rating name="read-only" value={3} readOnly />
+                        <p>Zomato, <span>India</span></p>
+                        <Rating name="read-only" value={5} readOnly />
                       </div>
                     </div>
 
@@ -300,8 +301,7 @@ export class home extends Component {
                     <div className="col-lg-12 col-sm-6 d-flex align-items-center">
                       <div className="benifits-habura-info">
                         <h4 className="ProximaNova-Bold pb-4">Benefits of Hubura</h4>
-                        <p>The Interference of Functional of the
-Capacity (Kasey Ahern in The Book of the Valuable Information) One of the most striking features of this problem is that concentration of the qualification be the goals of candidate.</p>
+                        <p>The Interference of Functional of the Capacity (Kasey Ahern in The Book of the Valuable Information) One of the most striking features of this problem is that concentration of the qualification be the goals of candidate.</p>
                       </div>
                     </div>
                     <div className="col-lg-12 col-sm-6">
@@ -354,18 +354,18 @@ Capacity (Kasey Ahern in The Book of the Valuable Information) One of the most s
           <div className="primary-footer">
             <div className="container-xl">
               <div className="row">
-                <div className="col-auto">
-                  <a href="#" className="nav-brand">
+                <div className="col-sm-auto">
+                  <a href="/" className="nav-brand">
                     <img src={require('../../assets/images/logo.svg').default} alt="" />
                   </a>
                 </div>
-                <div className="col">
+                <div className="col-sm d-flex justify-content-sm-end align-items-center">
                   <ul className="footer-links">
                     <li>
-                      <a href="#" title="Privacy Policy">Privacy Policy</a>
+                      <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
                     </li>
                     <li>
-                      <a href="#" title="Terms and Conditions">Terms and Conditions</a>
+                      <a href="/term-and-condition" title="Terms and Conditions">Terms and Conditions</a>
                     </li>
                     <li>
                       <a href="#" title="Cookie Policy">Cookie Policy</a>
@@ -382,7 +382,6 @@ Capacity (Kasey Ahern in The Book of the Valuable Information) One of the most s
                   <p>&copy; Hubura. All Rights Reserved</p>
                 </div>
                 <div className="col">
-
                   <ul className="social-links">
                     <li>
                       <a href="#" title="Facebook">

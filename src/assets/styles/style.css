@@ -82,6 +82,7 @@ input[type=number]::-webkit-outer-spin-button {
 .fs-11{font-size: 11px; line-height: 15px;}
 .fs-12{font-size: 12px; line-height: 16px;}
 .fs-14{font-size: 14px; line-height: 20px;}
+.fs-24{font-size: 24px; line-height: 30px;}
 
 .ProximaNova-Light{ font-family: ProximaNova-Light; font-weight: 300; }
 .ProximaNova-Regular{ font-family: ProximaNova-regular; font-weight: 400; }
@@ -113,7 +114,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Wrapper
 --------------------------------------------------------------------------------------------------------*/
-.wrapper{ display: block; min-height: 100vh; padding-bottom: 160px; }
+.wrapper{ display: block; padding-bottom: 160px; }
 
 
 /* Header
@@ -143,7 +144,6 @@ footer .secondary-footer .container-xl .col{ justify-content: flex-end; }
 footer .secondary-footer p{ display: flex; align-items: center; color: #979797; font-size: 14px; line-height: 18px; padding: 0; }
 footer .secondary-footer .social-links{ display: flex; align-items: center; justify-content: flex-end; }
 footer .secondary-footer .social-links li{ display: inline-block; vertical-align: middle; }
-footer .secondary-footer .social-links li + li{ margin-left: 15px; }
 footer .secondary-footer .social-links li a{ display: flex; align-items: center; justify-content: center; font-size: 16px; line-height: 24px; color: #424242; position: relative; border-radius: 50%; padding: 12px; }
 footer .secondary-footer .social-links li a::before{ content: ""; position: absolute; top: 50%; left: 50%; right: 50%; bottom: 50%; transform-origin: center; background: rgb(17 15 87 / 20%); border-radius: 50%; width: 0; height: 0; transform: scale(0); transition: all 0.2s ease-in-out; }
 footer .secondary-footer .social-links li a:hover::before{ top: 0; bottom: 0; left: 0; right: 0; transform: scale(1); width: 42px; height: 42px; }
@@ -248,6 +248,20 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 .benifits-habura-card-wrapper .benifits-habura-card p{ color: #424242; line-height: 26px; font-size: 16px; padding: 0; }
 
 
+/* main-content */
+.main-content{ padding: 50px 135px; }
+
+/* Privacy Policy */
+.content-page h6, .content-page h4{ color: #212121; }
+.content-page p{ color: #424242; font-size: 16px; line-height: 28px; }
+.colored-info{ margin: 20px 0 70px; padding: 30px 35px; font-size: 16px; line-height: 28px; color: #110f57; background: rgb(17 15 87 / 7%); border-radius: 8px; }
+.primary-listing{ display: block; margin: 15px 0; }
+.primary-listing li{ color: #424242; font-size: 16px; line-height: 20px; padding-left: 18px; position: relative; } 
+.primary-listing li::before{ content: ""; position: absolute; top: 6px; left: 0; width: 6px; height: 6px; border-radius: 50%; display: block; background: #009fff; }
+.primary-listing li + li{ margin-top: 8px; }
+
+
+
 
 /* Responsive Media Queries
 --------------------------------------------------------------------------------------------------------*/
@@ -265,6 +279,8 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     .how-habura-work, .hot-jobs-wrapper{ margin: 0 0 40px; }
     
     .hot-job-card{ padding: 20px; }
+    .main-content{ padding: 50px 35px; }
+    
 }
 
 @media (max-width:1199px) {
@@ -279,6 +295,13 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     .hot-job-card .organization-details div span{ font-size: 16px; line-height: 20px; }
     .hot-job-card .job-description{ font-size: 15px; line-height: 24px; height: auto; padding-bottom: 30px; }
     .hot-job-card .MuiButton-outlinedPrimary .MuiButton-label{ padding: 5px 0; }
+
+    .colored-info{ margin: 20px 0; padding: 15px 20px; line-height: 24px; }
+
+    .wrapper{ padding-bottom: 121px; }
+    footer .primary-footer{ padding: 15px 50px; }
+    footer .secondary-footer{ padding: 5px 50px; }
+    footer{ min-height: 121px; margin-top: -121px; }
 }
 
 @media (max-width:991px) {
@@ -287,9 +310,11 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 
 @media (max-width:767px) {
     h4{ font-size: 28px;line-height: 34px; }
-    header{ padding: 10px; }
-    header .nav-brand img{ max-width: 100%; width: 120px; height: 32px; }
+    header{ padding: 10px 15px; }
+    header .nav-brand img{ max-width: 100%; width: auto; height: 32px; }
     .btn.MuiButton-root{ padding: 8px 14px; }
+
+    .main-content{ padding: 50px 0; }
 
     .homepage-banner{ padding: 60px 15px 80px; }
     .homepage-banner h1{ font-size: 36px; line-height: 42px; max-width: 100%; }
@@ -300,15 +325,49 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     .banner-search{ max-width: 100%; }
     .banner-search .banner-select-search input{ padding: 0 0 0 8px; margin-left: 6px; }
     .banner-search button{ height: 43px; min-width: auto; padding: 6px 13px!important; }
-
     .how-habura-work-card{ padding: 20px; }
     .how-habura-work-card img{ width: 54px; height: 54px; margin: 0 auto 20px; }
-
     .benifits-habura-wrapper{ margin-bottom: 40px; }
+
+    .benifits-habura-card-wrapper .benifits-habura-card{ padding: 20px; }
+    .benifits-habura-card-wrapper .benifits-habura-card p{ line-height: 24px; font-size: 15px; }
+    .benifits-habura-card-wrapper .benifits-habura-card img{ width: 54px; height: 54px; margin: 0 0 12px; }
+
+    .colored-info{ margin: 10px 0; font-size: 14px; line-height: 22px; }
+    .primary-listing{ margin: 10px 0; }
+    .primary-listing li{ font-size: 14px; line-height: 20px; padding-left: 14px; }
+    .primary-listing li::before{ top: 5px; }
+    .primary-listing li + li { margin-top: 6px; }
+    
+    .content-page h4{ padding-bottom: 12px; }
+    .content-page h6{ font-size: 16px; line-height: 22px; }
+    .content-page p{ font-size: 14px; line-height: 22px; }
+
+    .wrapper{ padding-bottom: 107px; }
+    footer{ min-height: 107px; margin-top: -107px; }
+    footer .primary-footer{ padding: 12px 0; }
+    footer .secondary-footer{ padding: 6px 0; }
+    footer .primary-footer .nav-brand img{ height: 32px; width: auto; max-width: 100%; }
+    footer .primary-footer .footer-links li a{ font-size: 14px; line-height: 18px; }
+    footer .secondary-footer .social-links li a{ padding: 10px; }
+    footer .secondary-footer .social-links li a:hover::before{ width: 38px; height: 38px; }
+    footer .secondary-footer p{ font-size: 12px; line-height: 16px; }
 }
 
 @media (max-width:575px) {
     .homepage-banner{ padding: 50px 10px; }
     .homepage-banner h1{ font-size: 28px; line-height: 34px; }
     .homepage-banner h1 + p{ font-size: 14px; line-height: 20px; }
+
+    .content-page h4{ font-size: 22px; line-height: 28px; }
+
+    .main-content{ padding: 30px 0; }
+
+    .wrapper{ padding-bottom: 145px; }
+    footer{ min-height: 145px; margin-top: -145px; }
+    footer .primary-footer, footer .primary-footer .container-xl .col-auto, footer .primary-footer .container-xl .col{ display: block; }
+    footer .primary-footer .footer-links{ justify-content: flex-start; flex-wrap: wrap; margin: 12px 0 0; } 
+    footer .primary-footer .footer-links li + li{ margin-left: 0; }
+    footer .primary-footer .footer-links li{ margin: 2px 12px 2px 0; } 
+    footer .secondary-footer .social-links{ justify-content: center; }
 }

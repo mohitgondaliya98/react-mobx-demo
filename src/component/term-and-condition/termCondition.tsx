@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 
-export class privacyPolicy extends Component {
+export class termCondition extends Component {
     render() {
         return (
             <>
@@ -30,48 +30,30 @@ export class privacyPolicy extends Component {
 
                     <div className="main-content">
                         <div className="content-page container-xl">
-                            <h4 className="ProximaNova-Bold page-title">Privacy Policy</h4>
+                            <h4 className="ProximaNova-Bold page-title">Terms &amp; Conditions</h4>
 
                             <p className="pb-lg-4 pb-2">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                             </p>
 
-                            <div className="row py-lg-0 py-3">
-                                <div className="col-lg-4">
-                                    <h6 className="ProximaNova-Bold title pb-1">Following steps to achieve the solution</h6>
-                                    <p className="description pb-lg-4 pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
-                                </div>
-                                <div className="col-lg-4">
-                                    <h6 className="ProximaNova-Bold title pb-1">Following steps to achieve the solution</h6>
-                                    <p className="description pb-lg-4 pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
-                                </div>
-                                <div className="col-lg-4">
-                                    <h6 className="ProximaNova-Bold title pb-1">Following steps to achieve the solution</h6>
-                                    <p className="description pb-lg-4 pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
-                                </div>
-                            </div>
-
-                            <h6 className="ProximaNova-Bold title pb-2">Information Collection and Use</h6>
+                            <h6 className="ProximaNova-Bold title pb-2 fs-24">1. Defination</h6>
                             <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-                            <h6 className="ProximaNova-Bold title pb-2">Usage Data</h6>
+                            <h6 className="ProximaNova-Bold title pb-2 fs-24">2. Data Security</h6>
                             <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
                             <h6 className="ProximaNova-Bold title pb-0">Following steps to achieve the solution</h6>
-                            <ul className="primary-listing">
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
-                                <li>Dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                            <ul className="primary-listing mb-4">
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</li>
                                 <li>Dummy text of the printing and typesetting industry.</li>
                                 <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</li>
                                 <li>Dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</li>
-                                <li>Dummy text of the printing and typesetting industry.</li>
                             </ul>
 
-                            <p className="colored-info">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            </p>
+                            <h6 className="ProximaNova-Bold title pb-2 fs-24">3. Customer information</h6>
+                            <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
                         </div>
                     </div>
 
@@ -134,4 +116,4 @@ export class privacyPolicy extends Component {
     }
 }
 
-export default privacyPolicy
+export default termCondition
