@@ -11,11 +11,34 @@ export class home extends Component {
   render() {
     const settings = {
       dots: true,
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 1,
       initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     return (
       <>
@@ -58,15 +81,16 @@ export class home extends Component {
 
               <div className="banner-search d-md-none d-block">
                 <div className="row">
-                  <div className="col">
+                  <div className="col-sm">
                     <div className="banner-select-search">
                       <img className="location" src={require('../../assets/images/location-primary.svg').default} alt="" />
                       <Bannermenu></Bannermenu>
                       <input type="text" className="" placeholder="Search Users/Companies/Jobs" />
                     </div>
                   </div>
-                  <div className="col-auto px-0">
-                    <Button className="btn btn-iconic-text" variant="contained" color="primary"><img src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
+                  <div className="col-sm-auto px-sm-0">
+                    <Button className="btn btn-iconic-text d-sm-block d-none" variant="contained" color="primary"><img src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
+                    <Button className="btn btn-iconic-text mt-3 mx-auto d-sm-none d-block" variant="contained" color="primary"><span>Start now</span><img className="ms-2" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
                   </div>
                 </div>
               </div>

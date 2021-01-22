@@ -305,7 +305,14 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 }
 
 @media (max-width:991px) {
-    .benifits-habura-wrapper .benifits-habura-img{ max-width: 60%; margin: 0 auto; }
+    .benifits-habura-wrapper .benifits-habura-img{ max-width: 60%; margin: 20px auto; height: auto; }
+
+    .organization-testimonial-card{ padding: 20px; margin: 10px; }
+    .how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -25px; }
+    .organization-testimonial-card .organization-review{ font-size: 16px; line-height: 24px; margin-bottom: 30px; } 
+    .organization-testimonial-card .organization-details div p{ font-size: 18px; line-height: 22px; }
+    .organization-testimonial-card .organization-details i img, .organization-testimonial-card .organization-details i{ width: 54px; height: 54px; }
+    .organization-testimonial-card .organization-details div{ padding: 3px 10px; }
 }
 
 @media (max-width:767px) {
@@ -329,14 +336,17 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     .how-habura-work-card img{ width: 54px; height: 54px; margin: 0 auto 20px; }
     .benifits-habura-wrapper{ margin-bottom: 40px; }
 
-    .benifits-habura-card-wrapper .benifits-habura-card{ padding: 20px; }
+    .hot-job-card{ margin-bottom: 20px; }
+
+
+
+    .benifits-habura-card-wrapper .benifits-habura-card{ padding: 20px; margin-bottom: 20px; }
     .benifits-habura-card-wrapper .benifits-habura-card p{ line-height: 24px; font-size: 15px; }
-    .benifits-habura-card-wrapper .benifits-habura-card img{ width: 54px; height: 54px; margin: 0 0 12px; }
+    .benifits-habura-card-wrapper .benifits-habura-card img{ width: 54px; height: 54px; margin: 0 0 15px; }
 
     .colored-info{ margin: 10px 0; font-size: 14px; line-height: 22px; }
     .primary-listing{ margin: 10px 0; }
     .primary-listing li{ font-size: 14px; line-height: 20px; padding-left: 14px; }
-    .primary-listing li::before{ top: 5px; }
     .primary-listing li + li { margin-top: 6px; }
     
     .content-page h4{ padding-bottom: 12px; }
@@ -363,6 +373,11 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 
     .main-content{ padding: 30px 0; }
 
+    .organization-testimonial-card .organization-details i{ display: block;  margin: 0 0 10px;}
+    .organization-testimonial-card .organization-details div{ display: block; padding: 0; }
+
+    .benifits-habura-info{ text-align: center; }
+
     .wrapper{ padding-bottom: 145px; }
     footer{ min-height: 145px; margin-top: -145px; }
     footer .primary-footer, footer .primary-footer .container-xl .col-auto, footer .primary-footer .container-xl .col{ display: block; }
@@ -370,4 +385,8 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     footer .primary-footer .footer-links li + li{ margin-left: 0; }
     footer .primary-footer .footer-links li{ margin: 2px 12px 2px 0; } 
     footer .secondary-footer .social-links{ justify-content: center; }
+}
+
+@media (max-width:375px) {
+   
 }
