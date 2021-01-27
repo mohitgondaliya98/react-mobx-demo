@@ -17,7 +17,7 @@ export class home extends Component {
 
     const settings = {
       dots: true,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -53,17 +53,17 @@ export class home extends Component {
 
           {/* header start */}
           <header>
-            <div className="container-xl px-0">
+            <div className="px-0">
               <div className="row">
                 <div className="col">
-                  <a href="/" className="nav-brand">
+                  <a href="/" className="nav-brand" title="Hubura">
                     <img src={require('../../assets/images/logo.svg').default} alt="" />
                   </a>
                 </div>
                 <div className="col-auto">
                   <div className="right-handle">
                     <Button className="btn me-2">Login</Button>
-                    <Button className="btn btn-iconic-text" variant="contained" color="primary"><span>Signup</span><img className="ms-2" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
+                    <Button className="btn btn-iconic-text" variant="contained" color="primary"><span>Signup</span><img className="ms-xs-2 ms-1" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
                   </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export class home extends Component {
               <Reveal>
                 <Tween
                   to={{ text: "Careers are built on networks." }}
-                  duration={2}
+                  duration={3}
                   ease="none"
                 >
                   <h1 className="ProximaNova-Bold"></h1>
@@ -87,8 +87,10 @@ export class home extends Component {
               <p>If you’re looking for the latest in wireless headphones, look no further. These are perfect for TV, stereo, home, and cell phone.</p>
               <div className="banner-search d-md-flex d-none">
                 <div className="banner-select-search">
-                  <img className="location" src={require('../../assets/images/location-primary.svg').default} alt="" />
-                  <Bannermenu></Bannermenu>
+                  <div className="d-flex align-items-center">
+                    <img className="location" src={require('../../assets/images/location-primary.svg').default} alt="" />
+                    <Bannermenu></Bannermenu>
+                  </div>
                   <input type="text" className="" placeholder="Search Users/Companies/Jobs" />
                 </div>
                 <Button className="btn btn-iconic-text ms-2" variant="contained" color="primary"><span>Start now</span><img className="ms-2" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
@@ -98,8 +100,10 @@ export class home extends Component {
                 <div className="row">
                   <div className="col-sm">
                     <div className="banner-select-search">
-                      <img className="location" src={require('../../assets/images/location-primary.svg').default} alt="" />
-                      <Bannermenu></Bannermenu>
+                      <div className="d-flex align-items-center">
+                        <img className="location" src={require('../../assets/images/location-primary.svg').default} alt="" />
+                        <Bannermenu></Bannermenu>
+                      </div>
                       <input type="text" className="" placeholder="Search Users/Companies/Jobs" />
                     </div>
                   </div>
@@ -185,7 +189,7 @@ export class home extends Component {
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/facebook.jpg').default} alt="" /></i>
                       <div>
-                        <p>Facebook, <span>United States</span></p>
+                        <h6>Facebook, <span>United States</span></h6>
                         <Rating name="read-only" value={3} readOnly />
                       </div>
                     </div>
@@ -200,7 +204,7 @@ export class home extends Component {
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/airbnb.jpg').default} alt="" /></i>
                       <div>
-                        <p>Airbnb, <span>California</span></p>
+                        <h6>Airbnb, <span>California</span></h6>
                         <Rating name="read-only" value={4} readOnly />
                       </div>
                     </div>
@@ -214,7 +218,7 @@ export class home extends Component {
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/swiggy.jpg').default} alt="" /></i>
                       <div>
-                        <p>Swiggy, <span>India</span></p>
+                        <h6>Swiggy, <span>India</span></h6>
                         <Rating name="read-only" value={3} readOnly />
                       </div>
                     </div>
@@ -229,7 +233,7 @@ export class home extends Component {
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/amazon.jpg').default} alt="" /></i>
                       <div>
-                        <p>Amazon, <span>California</span></p>
+                        <h6>Amazon, <span>California</span></h6>
                         <Rating name="read-only" value={4} readOnly />
                       </div>
                     </div>
@@ -244,7 +248,7 @@ export class home extends Component {
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/zomato.jpg').default} alt="" /></i>
                       <div>
-                        <p>Zomato, <span>India</span></p>
+                        <h6>Zomato, <span>India</span></h6>
                         <Rating name="read-only" value={5} readOnly />
                       </div>
                     </div>
@@ -276,7 +280,7 @@ export class home extends Component {
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/airbnb.jpg').default} alt="" /></i>
                       <div>
-                        <p>Software Engineer</p>
+                        <h6>Software Engineer</h6>
                         <span>Airbnb</span>
                       </div>
                     </div>
@@ -288,15 +292,15 @@ export class home extends Component {
                   <div className="hot-job-card"
                     data-aos="fade-up"
                     data-aos-offset="-100"
-                    data-aos-delay="0"
-                    data-aos-duration="400"
+                    data-aos-delay="100"
+                    data-aos-duration="200"
                     data-aos-easing="ease-in-out"
                     data-aos-once="true"
                     data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/amazon.jpg').default} alt="" /></i>
                       <div>
-                        <p>Business executive</p>
+                        <h6>Business executive</h6>
                         <span>Amazon</span>
                       </div>
                     </div>
@@ -308,15 +312,15 @@ export class home extends Component {
                   <div className="hot-job-card"
                     data-aos="fade-up"
                     data-aos-offset="-100"
-                    data-aos-delay="0"
-                    data-aos-duration="600"
+                    data-aos-delay="200"
+                    data-aos-duration="200"
                     data-aos-easing="ease-in-out"
                     data-aos-once="true"
                     data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/zomato.jpg').default} alt="" /></i>
                       <div>
-                        <p>Business Lead</p>
+                        <h6>Business Lead</h6>
                         <span>Zomato</span>
                       </div>
                     </div>
@@ -327,16 +331,16 @@ export class home extends Component {
                 <div className="col-md-4 col-sm-6">
                   <div className="hot-job-card"
                     data-aos="fade-up"
-                    data-aos-offset="-100"
-                    data-aos-delay="0"
-                    data-aos-duration="800"
+                    data-aos-offset="-250"
+                    data-aos-delay="300"
+                    data-aos-duration="200"
                     data-aos-easing="ease-in-out"
                     data-aos-once="true"
                     data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/swiggy.jpg').default} alt="" /></i>
                       <div>
-                        <p>Product Manager</p>
+                        <h6>Product Manager</h6>
                         <span>Swiggy</span>
                       </div>
                     </div>
@@ -347,16 +351,16 @@ export class home extends Component {
                 <div className="col-md-4 col-sm-6">
                   <div className="hot-job-card"
                     data-aos="fade-up"
-                    data-aos-offset="-100"
-                    data-aos-delay="0"
-                    data-aos-duration="1000"
+                    data-aos-offset="-250"
+                    data-aos-delay="400"
+                    data-aos-duration="200"
                     data-aos-easing="ease-in-out"
                     data-aos-once="true"
                     data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/tesla.jpg').default} alt="" /></i>
                       <div>
-                        <p>Marketing</p>
+                        <h6>Marketing</h6>
                         <span>Tesla</span>
                       </div>
                     </div>
@@ -367,16 +371,16 @@ export class home extends Component {
                 <div className="col-md-4 col-sm-6">
                   <div className="hot-job-card"
                     data-aos="fade-up"
-                    data-aos-offset="-100"
-                    data-aos-delay="0"
-                    data-aos-duration="1200"
+                    data-aos-offset="-250"
+                    data-aos-delay="500"
+                    data-aos-duration="200"
                     data-aos-easing="ease-in-out"
                     data-aos-once="true"
                     data-aos-anchor-placement="top-center">
                     <div className="organization-details">
                       <i><img src={require('../../assets/images/homepage/airbnb.jpg').default} alt="" /></i>
                       <div>
-                        <p>Juniour Developer</p>
+                        <h6>Juniour Developer</h6>
                         <span>Airbnb</span>
                       </div>
                     </div>
@@ -389,14 +393,14 @@ export class home extends Component {
           </div>
           {/* Hot Jobs on Hubura end */}
 
-          {/* Benifits of Habura start */}
-          <div className="benifits-habura-wrapper">
+          {/* benefits of Habura start */}
+          <div className="benefits-habura-wrapper">
             <div className="container-xl">
               <div className="row">
                 <div className="col-lg-4">
                   <div className="row">
                     <div className="col-lg-12 col-sm-6 d-flex align-items-center">
-                      <div className="benifits-habura-info"
+                      <div className="benefits-habura-info"
                         data-aos="fade-up"
                         data-aos-offset="-200"
                         data-aos-delay="50"
@@ -409,18 +413,18 @@ export class home extends Component {
                       </div>
                     </div>
                     <div className="col-lg-12 col-sm-6">
-                      <img className="benifits-habura-img" src={require('../../assets/images/homepage/benifits-habura.svg').default} alt="" />
+                      <img className="benefits-habura-img" src={require('../../assets/images/homepage/benefits-habura.svg').default} alt="" />
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-8">
-                  <div className="row benifits-habura-card-wrapper">
+                  <div className="row benefits-habura-card-wrapper">
                     <div className="col-sm-6">
-                      <div className="benifits-habura-card"
+                      <div className="benefits-habura-card"
                         data-aos="fade-up"
                         data-aos-offset="-200"
-                        data-aos-delay="50"
-                        data-aos-duration="400"
+                        data-aos-delay="100"
+                        data-aos-duration="200"
                         data-aos-easing="ease-in-out"
                         data-aos-once="true"
                         data-aos-anchor-placement="top-center">
@@ -430,11 +434,11 @@ export class home extends Component {
                       </div>
                     </div>
                     <div className="col-sm-6">
-                      <div className="benifits-habura-card"
+                      <div className="benefits-habura-card"
                         data-aos="fade-up"
                         data-aos-offset="-200"
-                        data-aos-delay="50"
-                        data-aos-duration="600"
+                        data-aos-delay="150"
+                        data-aos-duration="200"
                         data-aos-easing="ease-in-out"
                         data-aos-once="true"
                         data-aos-anchor-placement="top-center">
@@ -444,11 +448,11 @@ export class home extends Component {
                       </div>
                     </div>
                     <div className="col-sm-6">
-                      <div className="benifits-habura-card"
+                      <div className="benefits-habura-card"
                         data-aos="fade-up"
                         data-aos-offset="-200"
-                        data-aos-delay="50"
-                        data-aos-duration="800"
+                        data-aos-delay="200"
+                        data-aos-duration="200"
                         data-aos-easing="ease-in-out"
                         data-aos-once="true"
                         data-aos-anchor-placement="top-center">
@@ -458,11 +462,11 @@ export class home extends Component {
                       </div>
                     </div>
                     <div className="col-sm-6">
-                      <div className="benifits-habura-card"
+                      <div className="benefits-habura-card"
                         data-aos="fade-up"
                         data-aos-offset="-200"
-                        data-aos-delay="50"
-                        data-aos-duration="1000"
+                        data-aos-delay="250"
+                        data-aos-duration="200"
                         data-aos-easing="ease-in-out"
                         data-aos-once="true"
                         data-aos-anchor-placement="top-center">
@@ -476,7 +480,7 @@ export class home extends Component {
               </div>
             </div>
           </div>
-          {/* Benifits of Habura end */}
+          {/* benefits of Habura end */}
 
         </div>
         {/* wrapper end */}
@@ -484,49 +488,45 @@ export class home extends Component {
         {/* Footer start */}
         <footer>
           <div className="primary-footer">
-            <div className="container-xl">
-              <div className="row">
-                <div className="col-sm-auto">
-                  <a href="/" className="nav-brand">
-                    <img src={require('../../assets/images/logo.svg').default} alt="" />
-                  </a>
-                </div>
-                <div className="col-sm d-flex justify-content-sm-end align-items-center">
-                  <ul className="footer-links">
-                    <li>
-                      <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="/term-and-condition" title="Terms and Conditions">Terms and Conditions</a>
-                    </li>
-                    <li>
-                      <a href="#" title="Cookie Policy">Cookie Policy</a>
-                    </li>
-                  </ul>
-                </div>
+            <div className="row">
+              <div className="col-sm-auto">
+                <a href="/" className="nav-brand" title="Hubura">
+                  <img src={require('../../assets/images/logo.svg').default} alt="" />
+                </a>
+              </div>
+              <div className="col-sm d-flex justify-content-sm-end align-items-center">
+                <ul className="footer-links">
+                  <li>
+                    <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="/term-and-condition" title="Terms and Conditions">Terms and Conditions</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Cookie Policy">Cookie Policy</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
           <div className="secondary-footer">
-            <div className="container-xl">
-              <div className="row">
-                <div className="col-auto">
-                  <p>&copy; Hubura. All Rights Reserved</p>
-                </div>
-                <div className="col">
-                  <ul className="social-links">
-                    <li>
-                      <a href="#" title="Facebook">
-                        <img src={require('../../assets/images/facebook.svg').default} alt="facebook" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="Linkedin">
-                        <img src={require('../../assets/images/linkedin.svg').default} alt="linkedin" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            <div className="row">
+              <div className="col-auto">
+                <p>&copy; Hubura. All Rights Reserved</p>
+              </div>
+              <div className="col">
+                <ul className="social-links">
+                  <li>
+                    <a href="#" title="Facebook">
+                      <img src={require('../../assets/images/facebook.svg').default} alt="facebook" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Linkedin">
+                      <img src={require('../../assets/images/linkedin.svg').default} alt="linkedin" />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

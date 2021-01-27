@@ -6,21 +6,21 @@ export class privacyPolicy extends Component {
         return (
             <>
                 {/* wrapper start */}
-                <div className="wrapper">
+                <div className="wrapper homepage">
 
                     {/* header start */}
                     <header>
-                        <div className="container-xl px-0">
+                        <div className="px-0">
                             <div className="row">
                                 <div className="col">
-                                    <a href="/" className="nav-brand">
+                                    <a href="/" className="nav-brand" title="Hubura">
                                         <img src={require('../../assets/images/logo.svg').default} alt="" />
                                     </a>
                                 </div>
                                 <div className="col-auto">
                                     <div className="right-handle">
                                         <Button className="btn me-2">Login</Button>
-                                        <Button className="btn btn-iconic-text" variant="contained" color="primary"><span>Signup</span><img className="ms-2" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
+                                        <Button className="btn btn-iconic-text" variant="contained" color="primary"><span>Signup</span><img className="ms-xs-2 ms-1" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ export class privacyPolicy extends Component {
                         <div className="container-xl">
                             <div className="row">
                                 <div className="col-sm-auto">
-                                    <a href="/" className="nav-brand">
+                                    <a href="/" className="nav-brand" title="Hubura">
                                         <img src={require('../../assets/images/logo.svg').default} alt="" />
                                     </a>
                                 </div>

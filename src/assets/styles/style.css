@@ -118,22 +118,23 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Wrapper
 --------------------------------------------------------------------------------------------------------*/
-.wrapper{ display: block; padding-bottom: 160px; }
+.wrapper{ display: block; padding-bottom: 160px; overflow: hidden; }
 
 
 /* Header
 --------------------------------------------------------------------------------------------------------*/
 header{ padding: 15px 35px; }
+.homepage  header{ border-bottom: 1px solid #dadce0; }
 header .nav-brand{ display: inline-block; vertical-align: top; }
 header .nav-brand img{ display: inline-block; vertical-align: top; width: 136px; height: 38px; }
-
+header .right-handle button{ height: 40px; }
 
 /* Footer
 --------------------------------------------------------------------------------------------------------*/
 footer{ background: #f3f3f3; min-height: 160px; margin-top: -160px; }
-footer .primary-footer{ display: flex; align-items: center;  padding: 30px 50px; }
-footer .primary-footer .container-xl .col-auto, footer .primary-footer .container-xl .col{ display: flex; align-items: center; }
-footer .primary-footer .container-xl .col{ justify-content: flex-end; }
+footer .primary-footer{ padding: 30px 50px; }
+footer .primary-footer .col-auto, footer .primary-footer .col{ display: flex; align-items: center; }
+footer .primary-footer .col{ justify-content: flex-end; }
 footer .primary-footer .nav-brand{ display: inline-block; vertical-align: top; }
 footer .primary-footer .nav-brand img{ display: inline-block; vertical-align: top; width: 136px; height: 38px; }
 footer .primary-footer .footer-links{ display: flex; align-items: center; justify-content: flex-end;}
@@ -142,9 +143,9 @@ footer .primary-footer .footer-links li + li{ margin-left: 15px; }
 footer .primary-footer .footer-links li a{ display: inline-block; vertical-align: middle; font-size: 16px; line-height: 24px; color: #424242; }
 footer .primary-footer .footer-links li a:hover{ color: #009fff; }
 
-footer .secondary-footer{ position: relative; display: flex; align-items: center; justify-content: space-between; padding: 9px 50px; overflow: hidden; border-top: 1px solid #e1e1e1; }
-footer .secondary-footer .container-xl .col-auto, footer .secondary-footer .container-xl .col{ display: flex; align-items: center; }
-footer .secondary-footer .container-xl .col{ justify-content: flex-end; }
+footer .secondary-footer{ position: relative;  padding: 9px 50px; overflow: hidden; border-top: 1px solid #e1e1e1; }
+footer .secondary-footer .col-auto, footer .secondary-footer .col{ display: flex; align-items: center; }
+footer .secondary-footer .col{ justify-content: flex-end; }
 footer .secondary-footer p{ display: flex; align-items: center; color: #979797; font-size: 14px; line-height: 18px; padding: 0; }
 footer .secondary-footer .social-links{ display: flex; align-items: center; justify-content: flex-end; }
 footer .secondary-footer .social-links li{ display: inline-block; vertical-align: middle; }
@@ -159,11 +160,12 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 --------------------------------------------------------------------------------------------------------*/
 
 /* Banner */
-.homepage-banner{ position: relative; padding: 120px 0 200px 150px; }
-.homepage-banner::before{ content: ""; position: absolute; top: -70px; left: 0; bottom: 0; width: 300px; z-index: -1; background: url('../images/homepage/home-banner-left.png') no-repeat left top; background-size: contain; }
+.homepage-banner{ position: relative; padding: 120px 0 150px; }
+/* .common-spacing{ padding: 0 150px; } */
+.homepage-banner::before{ content: ""; position: absolute; top: -70px; left: 0; bottom: -40px; width: 320px; z-index: -1; background: url('../images/homepage/home-banner-left.png') no-repeat left top; background-size: contain; }
 .homepage-banner .container-xl{ position: relative; }
-.homepage-banner .container-xl::after{ content: ""; position: absolute; top: 0; right: 55px; bottom: 0; width: 542px; height: 300px; z-index: -1; background: url('../images/homepage/home-banner.svg') no-repeat left top; background-size: contain; }
-.homepage-banner h1{ color: #212121; max-width: 555px; min-height: 160px; }
+.homepage-banner .container-xl::after{ content: ""; position: absolute; top: 0; right: -100px; bottom: 0; width: 542px; height: 300px; z-index: -1; background: url('../images/homepage/home-banner.svg') no-repeat left top; background-size: contain; }
+.homepage-banner h1{ color: #212121; max-width: 555px; min-height: 140px; }
 .homepage-banner h1 + p{ color: #424242; font-size: 16px; line-height: 24px; max-width: 555px;}
 
 /* Banner Search */
@@ -187,17 +189,17 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 .banner-search .MuiFormControl-root.country-select .MuiSelect-icon path{ display: none; }
 
 /* how-habura-work */
-.how-habura-work{ text-align: center; margin: 0 125px 60px; }
+.how-habura-work{ text-align: center; margin: 0 0 60px; }
 .how-habura-work-card{ padding: 40px 28px; border-radius: 10px; margin-bottom: 30px; transition: all 0.3s ease; cursor: pointer; }
 .how-habura-work-card img{ width: 75px; height: 75px; display: block; margin: 0 auto 30px; }
 .how-habura-work-card h6{ color: #110f57; line-height: 1.3; max-width: 166px; margin: 0 auto 12px; text-align: center; padding: 0; }
 .how-habura-work-card p{ color: #424242; line-height: 1.63; font-size: 16px; padding: 0; }
-.how-habura-work-card:hover{ box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1);  }
+.how-habura-work-card:hover{ box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1);  }
 
 /* Why People Love Hubura */
-.why-people-love{ text-align: center; margin-top: -60px; padding: 60px 0 120px 125px; overflow: hidden; }
+.why-people-love{ text-align: center; margin-top: -60px; padding: 60px 0 125px; overflow: hidden; }
 .how-habura-work-slider.slick-slider .slick-list{ overflow: visible; }
-.how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -45px; }
+.how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -30px; }
 
 .how-habura-work-slider.slick-slider .slick-next, .how-habura-work-slider.slick-slider .slick-prev{ display: none!important; }
 .how-habura-work-slider.slick-slider .slick-dots{ left: -60px; }
@@ -209,51 +211,51 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 .how-habura-work-slider.slick-slider .slick-dots li.slick-active button::before{ font-size: 15px; line-height: 14px; width: 14px; height: 14px; color: #009fff; }
 
 .organization-testimonial-card{ display: block; padding: 30px; cursor: pointer; border-radius: 10px; background-color: #ffffff; border: 1px solid #e4e4e4; text-align: left; margin: 15px; transition: all 0.3s ease; }
-.organization-testimonial-card:hover{ border-color: transparent; box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); }
+.organization-testimonial-card:hover{ border-color: transparent; box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); }
 .organization-testimonial-card .organization-details{ margin-bottom: 12px; }
 .organization-testimonial-card .organization-details i{ display: inline-block; vertical-align: top; width: 62px; height: 62px; border-radius: 50%; overflow: hidden; }
 .organization-testimonial-card .organization-details i img{ max-width: 100%;display: inline-block; vertical-align: top; width: 62px; height: 62px; }
 .organization-testimonial-card .organization-details div{ display: inline-block; vertical-align: top; padding: 5px 20px; }
-.organization-testimonial-card .organization-details div p{ font-size: 22px; line-height: 26px; color: #212121; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 0; margin-bottom: 4px; }
-.organization-testimonial-card .organization-details div p span{ font-size: 18px; line-height: 22px; font-family: ProximaNova-Regular; font-weight: 400;  }
+.organization-testimonial-card .organization-details div h6{ font-size: 22px; line-height: 26px; color: #212121; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 0; margin-bottom: 4px; }
+.organization-testimonial-card .organization-details div h6 span{ display: inline-block; vertical-align: middle; font-size: 18px; line-height: 22px; font-family: ProximaNova-Regular; font-weight: 400;  }
 .organization-testimonial-card .organization-details div .MuiRating-root{ color: #ffad52; }
 .organization-testimonial-card .organization-details div .MuiRating-readOnly span .MuiSvgIcon-root{ width: 18px; height: 18px; }
 .organization-testimonial-card .organization-review{ padding: 0; font-size: 18px; line-height: 28px; color: #424242; margin-bottom: 55px; }
 
 /* hot-jobs-wrapper */
-.hot-jobs-wrapper{ text-align: center; margin: 0 125px 60px; }
+.hot-jobs-wrapper{ text-align: center; margin: 0 0 60px; }
 .hot-job-card{ padding: 30px; border-radius: 10px; margin-bottom: 30px; border: 1px solid #e4e4e4; transition: all 0.3s ease; cursor: pointer; text-align: left; }
 
 .hot-job-card .organization-details{ margin-bottom: 15px; display: flex; align-items: start;  }
 .hot-job-card .organization-details i{ display: inline-block; vertical-align: top; min-width: 70px; height: 70px; border-radius: 50%; overflow: hidden; }
 .hot-job-card .organization-details i img{ max-width: 100%;display: inline-block; vertical-align: top; min-width: 70px; height: 70px; }
 .hot-job-card .organization-details div{ display: inline-block; vertical-align: top; padding: 5px 20px; }
-.hot-job-card .organization-details div p{ font-size: 20px; line-height: 26px; color: #212121; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 0; margin-bottom: 4px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 200px; }
+.hot-job-card .organization-details div h6{ font-size: 20px; line-height: 26px; color: #212121; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 0; margin-bottom: 4px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 200px; }
 .hot-job-card .organization-details div span{ display: block; font-size: 18px; line-height: 22px;  text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 200px;  }
 .hot-job-card .job-description{ font-size: 16px; line-height: 28px; color: #424242; height: 248px; overflow: hidden; }
 .hot-job-card button{ width: 100%;display: block; font-weight: 600;font-family: ProximaNova-Semibold; }
-.hot-job-card:hover{ box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); border-color: transparent; }
+.hot-job-card:hover{ box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); border-color: transparent; }
 
 
-/* benifits-habura  */
-.benifits-habura-wrapper{ position: relative; margin-bottom: 80px; }
-.benifits-habura-wrapper:after{ content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 300px; z-index: -1; background: url('../images/homepage/homepage-bottom-right.png') no-repeat right top; background-size: contain; }
-.benifits-habura-wrapper .benifits-habura-img{ display: block; width: 330px; height: 395px; max-width: 100%; margin-top: 85px; }
+/* benefits-habura  */
+.benefits-habura-wrapper{ position: relative; margin-bottom: 80px; }
+.benefits-habura-wrapper:after{ content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 300px; z-index: -1; background: url('../images/homepage/homepage-bottom-right.png') no-repeat right top; background-size: contain; }
+.benefits-habura-wrapper .benefits-habura-img{ display: block; width: 330px; height: 395px; max-width: 100%; margin-top: 85px; }
 
-.benifits-habura-card-wrapper .benifits-habura-card{ padding: 30px; text-align: left; border-radius: 10px; margin-bottom: 30px; transition: all 0.3s ease; cursor: pointer; }
-.benifits-habura-card-wrapper .benifits-habura-card:hover{ background: #FFF; box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); }
-.benifits-habura-card-wrapper .benifits-habura-card img{ width: 60px; height: 60px; display: block; margin: 0 0 20px; }
-.benifits-habura-card-wrapper .benifits-habura-card h6{ font-size: 20px; line-height: 26px; color: #110f57; margin: 0 0 8px; padding: 0; }
-.benifits-habura-card-wrapper .benifits-habura-card p{ color: #424242; line-height: 26px; font-size: 16px; padding: 0; }
+.benefits-habura-card-wrapper .benefits-habura-card{ padding: 30px; text-align: left; border-radius: 10px; margin-bottom: 30px; transition: all 0.3s ease; cursor: pointer; }
+.benefits-habura-card-wrapper .benefits-habura-card:hover{ background: #FFF; box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); }
+.benefits-habura-card-wrapper .benefits-habura-card img{ width: 60px; height: 60px; display: block; margin: 0 0 20px; }
+.benefits-habura-card-wrapper .benefits-habura-card h6{ font-size: 20px; line-height: 26px; color: #110f57; margin: 0 0 8px; padding: 0; }
+.benefits-habura-card-wrapper .benefits-habura-card p{ color: #424242; line-height: 26px; font-size: 16px; padding: 0; }
 
 
 /* main-content */
-.main-content{ padding: 50px 135px; }
+.main-content{ padding: 50px 0; }
 
 /* Privacy Policy */
 .content-page h6, .content-page h4{ color: #212121; }
 .content-page p{ color: #424242; font-size: 16px; line-height: 28px; }
-.colored-info{ margin: 20px 0 70px; padding: 30px 35px; font-size: 16px; line-height: 28px; color: #110f57; background: rgb(17 15 87 / 7%); border-radius: 8px; }
+p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; font-size: 16px; line-height: 28px; color: #110f57; background: rgb(17 15 87 / 7%); border-radius: 8px; }
 .primary-listing{ display: block; margin: 15px 0; }
 .primary-listing li{ color: #424242; font-size: 16px; line-height: 20px; padding-left: 18px; position: relative; } 
 .primary-listing li::before{ content: ""; position: absolute; top: 6px; left: 0; width: 6px; height: 6px; border-radius: 50%; display: block; background: #009fff; }
@@ -267,8 +269,13 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 @media (max-width:1600px) {
 }
 
-@media (max-width:1440px) {
+@media (min-width: 1400px){
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { max-width: 1170px;}
+}
+
+@media (max-width:1439px) {
     .homepage-banner{ padding: 80px 40px 120px; }
+
     .why-people-love{ padding: 0 15px 80px; margin-top: 0; }
     .how-habura-work-slider.slick-slider .slick-dots{ left: 0; }
     .how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -30px; }
@@ -281,33 +288,36 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 }
 
 @media (max-width:1199px) {
+    header{ padding: 15px; }
     .homepage-banner h1{ font-size: 48px; line-height: 54px; max-width: 400px; }
     .homepage-banner .container-xl::after{ opacity: 0.3; }
+    .homepage-banner h1{ min-height: auto; }
 
     .hot-job-card .organization-details, .hot-job-card .organization-details div{ display: block; text-align: center; }
-    .hot-job-card .organization-details div p, .hot-job-card .organization-details div span{ max-width: 100%; }
+    .hot-job-card .organization-details div h6, .hot-job-card .organization-details div span{ max-width: 100%; }
     .hot-job-card .organization-details i{ margin: 0 auto 10px; min-width: 54px; height: 54px; }
     .hot-job-card .organization-details i img{ min-width: 54px; height: 54px; }
-    .hot-job-card .organization-details div p{ font-size: 18px; line-height: 22px; }
+    .hot-job-card .organization-details div h6{ font-size: 18px; line-height: 22px; }
     .hot-job-card .organization-details div span{ font-size: 16px; line-height: 20px; }
     .hot-job-card .job-description{ font-size: 15px; line-height: 24px; height: auto; padding-bottom: 30px; }
     .hot-job-card .MuiButton-outlinedPrimary .MuiButton-label{ padding: 5px 0; }
 
-    .colored-info{ margin: 20px 0; padding: 15px 20px; line-height: 24px; }
+    p.colored-info{ margin: 20px 0; padding: 15px 20px; line-height: 24px; }
+    .main-content{ padding: 50px 0; }
 
     .wrapper{ padding-bottom: 121px; }
-    footer .primary-footer{ padding: 15px 50px; }
-    footer .secondary-footer{ padding: 5px 50px; }
+    footer .primary-footer{ padding: 15px 15px; }
+    footer .secondary-footer{ padding: 5px 15px; }
     footer{ min-height: 121px; margin-top: -121px; }
 }
 
 @media (max-width:991px) {
-    .benifits-habura-wrapper .benifits-habura-img{ max-width: 60%; margin: 20px auto; height: auto; }
+    .benefits-habura-wrapper .benefits-habura-img{ max-width: 60%; margin: 20px auto; height: auto; }
 
     .organization-testimonial-card{ padding: 20px; margin: 10px; }
     .how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -25px; }
     .organization-testimonial-card .organization-review{ font-size: 16px; line-height: 24px; margin-bottom: 30px; } 
-    .organization-testimonial-card .organization-details div p{ font-size: 18px; line-height: 22px; }
+    .organization-testimonial-card .organization-details div h6{ font-size: 18px; line-height: 22px; }
     .organization-testimonial-card .organization-details i img, .organization-testimonial-card .organization-details i{ width: 54px; height: 54px; }
     .organization-testimonial-card .organization-details div{ padding: 3px 10px; }
 }
@@ -316,7 +326,7 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     h4{ font-size: 28px;line-height: 34px; }
     header{ padding: 10px 15px; }
     header .nav-brand img{ max-width: 100%; width: auto; height: 32px; }
-    .btn.MuiButton-root{ padding: 8px 14px; }
+    .btn.MuiButton-root{ padding: 8px 12px; font-size: 14px; line-height: 18px; height: 34px; }
 
     .main-content{ padding: 50px 0; }
 
@@ -328,18 +338,18 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     .banner-search .MuiFormControl-root.country-select{ min-width: 80px; max-width: 120px; }
     .banner-search{ max-width: 100%; }
     .banner-search .banner-select-search input{ padding: 0 0 0 8px; margin-left: 6px; }
-    .banner-search button{ height: 43px; min-width: auto; padding: 6px 13px!important; }
+    .banner-search .btn.MuiButton-root{ height: 43px; min-width: auto; padding: 6px 13px!important; }
     .how-habura-work-card{ padding: 20px; }
     .how-habura-work-card img{ width: 54px; height: 54px; margin: 0 auto 20px; }
-    .benifits-habura-wrapper{ margin-bottom: 40px; }
+    .benefits-habura-wrapper{ margin-bottom: 40px; }
 
     .hot-job-card{ margin-bottom: 20px; }
 
-    .benifits-habura-card-wrapper .benifits-habura-card{ padding: 20px; margin-bottom: 20px; }
-    .benifits-habura-card-wrapper .benifits-habura-card p{ line-height: 24px; font-size: 15px; }
-    .benifits-habura-card-wrapper .benifits-habura-card img{ width: 54px; height: 54px; margin: 0 0 15px; }
+    .benefits-habura-card-wrapper .benefits-habura-card{ padding: 20px; margin-bottom: 20px; }
+    .benefits-habura-card-wrapper .benefits-habura-card p{ line-height: 24px; font-size: 15px; }
+    .benefits-habura-card-wrapper .benefits-habura-card img{ width: 54px; height: 54px; margin: 0 0 15px; }
 
-    .colored-info{ margin: 10px 0; font-size: 14px; line-height: 22px; }
+    p.colored-info{ margin: 10px 0; font-size: 14px; line-height: 22px; }
     .primary-listing{ margin: 10px 0; }
     .primary-listing li{ font-size: 14px; line-height: 20px; padding-left: 14px; }
     .primary-listing li + li { margin-top: 6px; }
@@ -350,8 +360,8 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 
     .wrapper{ padding-bottom: 107px; }
     footer{ min-height: 107px; margin-top: -107px; }
-    footer .primary-footer{ padding: 12px 0; }
-    footer .secondary-footer{ padding: 6px 0; }
+    footer .primary-footer{ padding: 12px 15px; }
+    footer .secondary-footer{ padding: 6px 15px; }
     footer .primary-footer .nav-brand img{ height: 32px; width: auto; max-width: 100%; }
     footer .primary-footer .footer-links li a{ font-size: 14px; line-height: 18px; }
     footer .secondary-footer .social-links li a{ padding: 10px; }
@@ -360,9 +370,13 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 }
 
 @media (max-width:575px) {
+    header .right-handle .btn.MuiButton-root{ height: auto; padding: 6px 9px; }
+
     .homepage-banner{ padding: 50px 10px; }
     .homepage-banner h1{ font-size: 28px; line-height: 34px; }
     .homepage-banner h1 + p{ font-size: 14px; line-height: 20px; }
+
+
 
     .content-page h4{ font-size: 22px; line-height: 28px; }
 
@@ -371,7 +385,7 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     .organization-testimonial-card .organization-details i{ display: block;  margin: 0 0 10px;}
     .organization-testimonial-card .organization-details div{ display: block; padding: 0; }
 
-    .benifits-habura-info{ text-align: center; }
+    .benefits-habura-info{ text-align: center; }
 
     .wrapper{ padding-bottom: 145px; }
     footer{ min-height: 145px; margin-top: -145px; }
@@ -380,4 +394,11 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
     footer .primary-footer .footer-links li + li{ margin-left: 0; }
     footer .primary-footer .footer-links li{ margin: 2px 12px 2px 0; } 
     footer .secondary-footer .social-links{ justify-content: center; }
+}
+
+@media (max-width: 425px) {
+    .banner-search .banner-select-search{ display: block;}
+    .banner-search .banner-select-search input{ border-left: 0; border-top: 1px solid #efefef; margin: 4px 0 0; padding: 4px 0 0; }
+    .banner-search .MuiFormControl-root.country-select { min-width: calc(100% - 25px); max-width: 100%;}
+    .banner-search .banner-select-search .location{ width: 20px; height: 20px; }
 }
