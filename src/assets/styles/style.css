@@ -125,12 +125,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /* radio-group */
+.radio-group{ margin-bottom: 20px; }
 .radio-group label{ font-size: 16px; line-height: 20px; color: #686868; display: block; margin-bottom: 8px; }
-
-
-
-
-
 
 
 
@@ -315,7 +311,15 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 
 .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic div > span{ display: block; font-size: 14px; line-height: 19px; color: #838e9b; margin-top: 6px; }
 
-.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root{ width: 360px; }
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root, .add-profile-stepper-wrapper .tab-main-content  .MuiButton-containedPrimary{ width: 360px; }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root + .MuiToggleButton-root{ margin-left: 12px; }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root { border: 1px solid #e7e4f1; border-radius: 10px; }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root{ display: flex; justify-content: center; align-items: center; width: 54px; height: 54px; }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label{ display: flex; justify-content: center; align-items: center; position: relative; width: 54px; height: 54px; }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label img{ position: absolute; top: 11px; left: 0; right: 0; transition: all 0.2s ease-in-out; width: 30px; height: 30px; }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label .default, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root.Mui-selected .MuiToggleButton-label .active, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root:hover .MuiToggleButton-label .active{ opacity: 1; visibility: visible; transform: scale(1); }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root.Mui-selected .MuiToggleButton-label .default, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root:hover .MuiToggleButton-label .default, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label .active{ opacity: 0; visibility: hidden; transform: scale(0); }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root.Mui-selected{ background: rgba(17, 15, 87, 0.1); border-color: transparent; }
 
 
 

@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 // import Box from '@material-ui/core/Box';
 // import  TextField from '@material-ui/core/TextField';
 import { Button, Typography, Box, Tabs, Tab, TextField, RadioGroup, Radio, FormControlLabel, } from '@material-ui/core';
-import { ToggleButtonGroup } from '@material-ui/lab';
+import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
 
 
 interface TabPanelProps {
@@ -69,7 +69,7 @@ export default function AddProfile() {
                                         <img className="default" src={require('../../assets/images/basic-info-grey.svg').default} alt="" />
                                         <img className="active" src={require('../../assets/images/basic-info-primary.svg').default} alt="" />
                                     </i>
-                                    <p> Basic Information
+                                    <p>Basic Information
                                         <span>About Yourself</span>
                                     </p>
                                 </div>
@@ -80,7 +80,7 @@ export default function AddProfile() {
                                         <img className="default" src={require('../../assets/images/qualification-grey.svg').default} alt="" />
                                         <img className="active" src={require('../../assets/images/qualification-primary.svg').default} alt="" />
                                     </i>
-                                    <p> Qualification
+                                    <p>Qualification
                                         <span>Education &amp; Degree</span>
                                     </p>
                                 </div>
@@ -91,7 +91,7 @@ export default function AddProfile() {
                                         <img className="default" src={require('../../assets/images/skills-certifications-grey.svg').default} alt="" />
                                         <img className="active" src={require('../../assets/images/skills-certifications-primary.svg').default} alt="" />
                                     </i>
-                                    <p> Skills &amp; Certifications
+                                    <p>Skills &amp; Certifications
                                         <span>Professional Skills</span>
                                     </p>
                                 </div>
@@ -102,7 +102,7 @@ export default function AddProfile() {
                                         <img className="default" src={require('../../assets/images/experience-grey.svg').default} alt="" />
                                         <img className="active" src={require('../../assets/images/experience-primary.svg').default} alt="" />
                                     </i>
-                                    <p> Experience
+                                    <p>Experience
                                         <span>Internship &amp; Jobs</span>
                                     </p>
                                 </div>
@@ -113,7 +113,7 @@ export default function AddProfile() {
                                         <img className="default" src={require('../../assets/images/preferred-jobs-grey.svg').default} alt="" />
                                         <img className="active" src={require('../../assets/images/preferred-jobs-primary.svg').default} alt="" />
                                     </i>
-                                    <p> Preferred Jobs
+                                    <p>Preferred Jobs
                                         <span>Job location,Timings etc</span>
                                     </p>
                                 </div>
@@ -124,7 +124,7 @@ export default function AddProfile() {
                                         <img className="default" src={require('../../assets/images/additional-info-grey.svg').default} alt="" />
                                         <img className="active" src={require('../../assets/images/additional-info-primary.svg').default} alt="" />
                                     </i>
-                                    <p> Additional Info
+                                    <p>Additional Info
                                         <span>General Details</span>
                                     </p>
                                 </div>
@@ -157,30 +157,35 @@ export default function AddProfile() {
                                     <TextField className="form-control" label="Company" variant="outlined" />
                                     <TextField className="form-control" label="Email ID" variant="outlined" />
 
-                                    {/* <div className="radio-group">
+                                    <div className="radio-group">
                                         <label>Gender</label>
                                         <ToggleButtonGroup
                                             value={alignment}
                                             exclusive
                                             onChange={handleAlignment}
                                             aria-label="text alignment"
+                                            className="gender-toggle"
                                         >
-                                            <ToggleButton value="left" aria-label="left aligned">
+                                            <ToggleButton value="left" aria-label="left aligned" title="Male">
                                                 <img src={require('../../assets/images/male-black.svg').default} className="default" alt="" />
                                                 <img src={require('../../assets/images/male-primary.svg').default} className="active" alt="" />
                                             </ToggleButton>
-                                            <ToggleButton value="center" aria-label="centered">
+                                            <ToggleButton value="center" aria-label="centered aligned" title="Female">
                                                 <img src={require('../../assets/images/female-black.svg').default} className="default" alt="" />
                                                 <img src={require('../../assets/images/female-primary.svg').default} className="active" alt="" />
                                             </ToggleButton>
-                                            <ToggleButton value="right" aria-label="right aligned">
+                                            <ToggleButton value="right" aria-label="right aligned" title="Other">
                                                 <img src={require('../../assets/images/unisex-black.svg').default} className="default" alt="" />
                                                 <img src={require('../../assets/images/unisex-primary.svg').default} className="active" alt="" />
                                             </ToggleButton>
                                         </ToggleButtonGroup>
-                                    </div> */}
+                                    </div>
 
                                     <TextField className="form-control" label="Address" variant="outlined" />
+
+                                    <TextField label="Profile Summary" className="form-control" multiline rows={3} variant="outlined" />
+
+                                    <Button className="btn btn-iconic-text" variant="contained" color="primary"><span>Next</span><img className="ms-xs-2 ms-1" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
 
                                 </div>
                             </div>
@@ -188,8 +193,8 @@ export default function AddProfile() {
                         <TabPanel value={value} index={1}>
                             <div className="add-profile-tab-content">
                                 <div className="tab-title">
-                                    <h6>Basic Information</h6>
-                                    <span>About Yourself</span>
+                                    <p>Qualification</p>
+                                    <span>Education &amp; Degree</span>
                                 </div>
                                 <div className="tab-main-content">
                                     <div className="choose-profile-pic">
@@ -204,8 +209,8 @@ export default function AddProfile() {
                         <TabPanel value={value} index={2}>
                             <div className="add-profile-tab-content">
                                 <div className="tab-title">
-                                    <h6>Basic Information</h6>
-                                    <span>About Yourself</span>
+                                    <p>Skills &amp; Certifications</p>
+                                    <span>Professional Skills</span>
                                 </div>
                                 <div className="tab-main-content">
                                     <div className="choose-profile-pic">
@@ -220,8 +225,8 @@ export default function AddProfile() {
                         <TabPanel value={value} index={3}>
                             <div className="add-profile-tab-content">
                                 <div className="tab-title">
-                                    <h6>Basic Information</h6>
-                                    <span>About Yourself</span>
+                                    <p>Experience</p>
+                                    <span>Internship &amp; Jobs</span>
                                 </div>
                                 <div className="tab-main-content">
                                     <div className="choose-profile-pic">
@@ -236,8 +241,8 @@ export default function AddProfile() {
                         <TabPanel value={value} index={4}>
                             <div className="add-profile-tab-content">
                                 <div className="tab-title">
-                                    <h6>Basic Information</h6>
-                                    <span>About Yourself</span>
+                                    <p>Preferred Jobs</p>
+                                    <span>Job location,Timings etc</span>
                                 </div>
                                 <div className="tab-main-content">
                                     <div className="choose-profile-pic">
@@ -252,8 +257,8 @@ export default function AddProfile() {
                         <TabPanel value={value} index={5}>
                             <div className="add-profile-tab-content">
                                 <div className="tab-title">
-                                    <h6>Basic Information</h6>
-                                    <span>About Yourself</span>
+                                    <p>Additional Info</p>
+                                    <span>General Details</span>
                                 </div>
                                 <div className="tab-main-content">
                                     <div className="choose-profile-pic">
