@@ -106,8 +106,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .MuiButton-text:hover{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important; }
 
-.MuiButton-outlinedPrimary{ border: 0!important; padding: 2px!important; border-radius: 6px!important;background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; }
-.MuiButton-outlinedPrimary .MuiButton-label{ background: #FFF; padding: 8px 0; border-radius: 4px!important; }
+.MuiButton-outlinedPrimary{ border: 0!important; padding: 2px!important; border-radius: 6px!important;background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; overflow: hidden; }
+.MuiButton-outlinedPrimary .MuiButton-label{ background: #FFF; padding: 6px 20px; border-radius: 4px!important; }
 .MuiButton-outlinedPrimary:hover .MuiButton-label{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important;  }
 
 .btn-iconic-text{ display: flex; }
@@ -115,6 +115,26 @@ input[type=number]::-webkit-outer-spin-button {
 .btn-iconic-text img{ height: 18px; width: 18px; } 
 
 .btn-lg{ font-size: 20px; line-height: 24px; padding: 12px 38px; }
+
+.form-control.MuiFormControl-root{ display: block; width: 100%; margin-bottom: 20px; }
+.form-control.MuiFormControl-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{ border-color: rgb(17 15 87); }
+.form-control.MuiFormControl-root .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline{ border-color: #e7e4f1; }
+.form-control.MuiFormControl-root .MuiInputBase-root.Mui-focused .MuiOutlinedInput-notchedOutline{  border-color: rgb(17 15 87); }
+.form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ color: #212121; font-size: 16px; line-height: 20px; }
+.form-control.MuiFormControl-root .MuiFormLabel-root{ color: rgba(104, 104, 104, 0.5); }
+
+
+/* radio-group */
+.radio-group label{ font-size: 16px; line-height: 20px; color: #686868; display: block; margin-bottom: 8px; }
+
+
+
+
+
+
+
+
+
 
 /* Wrapper
 --------------------------------------------------------------------------------------------------------*/
@@ -260,6 +280,58 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .primary-listing li{ color: #424242; font-size: 16px; line-height: 20px; padding-left: 18px; position: relative; } 
 .primary-listing li::before{ content: ""; position: absolute; top: 6px; left: 0; width: 6px; height: 6px; border-radius: 50%; display: block; background: #009fff; }
 .primary-listing li + li{ margin-top: 8px; }
+
+
+/* add-profile-stepper */
+.add-profile-stepper-wrapper { display: flex; align-items: flex-start; padding: 0 35px; }
+.add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 286px); }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ opacity: 1; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ display: flex; align-items: center; border: 1px solid #dadce0; position: relative; border-radius: 6px; padding: 22px 25px;min-width: 228px; max-width: 228px; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i{ display: inline-block; vertical-align: top; position: relative; margin-right: 16px; width: 30px; height: 30px; display: inline-block; vertical-align: top; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 30px; height: 30px; display: block; margin: auto; transition: all 0.2s ease; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img.active, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step i img.default, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step i img.default{ opacity: 0; visibility: hidden; transform: scale(0); }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step i img.active, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step i img.active { opacity: 1; visibility: visible; transform: scale(1); }
+
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover{ box-shadow: 0 2px 7px 0 rgba(100, 100, 100, 0.2); transition: all 0.2s ease; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step p, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step p{ color: #110f57; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step p span, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step p span{ color: #838e9b; }
+
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ padding: 10px 20px; margin: -10px -17px; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ padding: 0; margin-bottom: 15px; border-radius: 6px; min-width: 280px; max-width: 280px; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step p{ display: inline-block; vertical-align: top; text-align: left; padding: 0; color: #cbcbcb; font-size: 16px; line-height: 20px;letter-spacing: -0.23px; transition: all 0.2s ease; text-transform: capitalize; font-family: ProximaNova-Bold; font-weight: 700; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step p span{ display: block; color: #d3d3d3; font-size: 14px; line-height: 18px; letter-spacing: -0.34px; font-family: ProximaNova-Regular; font-weight: 400; transition: all 0.2s ease;}
+
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTabs-indicator{ display: none; } 
+.add-profile-stepper-wrapper .MuiBox-root{ padding: 0; }
+
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content{ padding: 0 50px; }
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title{ margin-bottom: 30px; }
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title p{ font-size: 24px; line-height: 28px; font-family: ProximaNova-Bold; font-weight: 700; padding: 0; color: #212121; }
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title span{ font-size: 16px; line-height: 20px; color: #424242; }
+
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic{ display: flex; align-items: center; margin-bottom: 36px; }
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic i{ display: flex; align-items: center; justify-content: center; min-width: 100px; height: 100px; background: #ededed; border-radius: 50%; overflow: hidden; margin-right: 20px; }
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic i .uploaded-img{ width: 100px; height: 100px; display: block; border-radius: 50%; overflow: hidden; }
+
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic div > span{ display: block; font-size: 14px; line-height: 19px; color: #838e9b; margin-top: 6px; }
+
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root{ width: 360px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './component/home/home';
 import Privacy from './component/privacy/privacyPolicy';
 import TermCondition from './component/term-and-condition/termCondition';
+import AddProfile from './component/profile/addProfile';
 
 export default class App extends React.Component<{}, {}> {
   private todoStore: ToDoStore;
@@ -30,6 +31,7 @@ export default class App extends React.Component<{}, {}> {
             <Route exact path="/" component={(props: any) => <HomePage />} />
             <Route exact path="/privacy-policy" component={(props: any) => <Privacy />} />
             <Route exact path="/term-and-condition" component={(props: any) => <TermCondition />} />
+            <Route exact path="/add-profile" component={(props: any) => <AddProfile />} />
           </Switch>
         </Router>
       </>
