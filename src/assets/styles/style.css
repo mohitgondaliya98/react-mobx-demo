@@ -107,12 +107,16 @@ input[type=number]::-webkit-outer-spin-button {
 .MuiButton-text:hover{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important; }
 
 .MuiButton-outlinedPrimary{ border: 0!important; padding: 2px!important; border-radius: 6px!important;background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; overflow: hidden; }
-.MuiButton-outlinedPrimary .MuiButton-label{ font-family: ProximaNova-Semibold; font-weight: 600; background: #FFF; padding: 6px 20px; border-radius: 4px!important; }
+.MuiButton-outlinedPrimary .MuiButton-label{ width: auto; font-family: ProximaNova-Semibold; font-weight: 600; background: #FFF; padding: 6px 20px; border-radius: 4px!important; display: flex; justify-content: flex-start; align-items: center; }
 .MuiButton-outlinedPrimary:hover .MuiButton-label{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important;  }
 
 .btn-iconic-text{ display: flex; }
-.btn-iconic-text span, .btn-iconic-text img{ display: inline-block; vertical-align: middle; font-family: ProximaNova-Semibold; font-weight: 600; }
+.btn-iconic-text > span, .btn-iconic-text img{ display: inline-block; vertical-align: middle; font-family: ProximaNova-Semibold; font-weight: 600; }
 .btn-iconic-text img{ height: 18px; width: 18px; } 
+.btn-iconic-text .MuiButton-startIcon{ margin-right: 4px; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; }
+.btn-iconic-text .MuiButton-startIcon svg{ font-size: 16px; }
+.btn-iconic-text .MuiButton-label span{ display: inline-block; vertical-align: middle; font-family: ProximaNova-Semibold; font-weight: 600; }
+
 
 .btn-lg{ font-size: 14px; line-height: 18px; height: 50px; padding: 12px 38px; }
 
@@ -123,6 +127,17 @@ input[type=number]::-webkit-outer-spin-button {
 .form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ color: #212121; font-size: 16px; line-height: 20px; height: 17px; }
 .form-control.MuiFormControl-root .MuiFormLabel-root{ color: rgba(104, 104, 104, 0.5); }
 .form-control.MuiFormControl-root .MuiInputBase-root textarea.MuiInputBase-input{ height: 63px; }
+
+
+.MuiAutocomplete-root .MuiFormControl-root .MuiFormHelperText-root{ font-size: 13px; line-height: 17px; color: #686868; margin: 5px 0 0; padding: 0; }
+
+
+/* Chips */
+.MuiChip-root.primary-chips{ background-color: rgba(17, 15, 87, 0.10); border-radius: 10px; color: #110f57; height: auto; }
+.MuiChip-root.primary-chips .MuiChip-label{ padding: 10px 12px; font-size: 16px; line-height: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 250px; }
+.MuiChip-root.primary-chips .MuiChip-deleteIcon{ color: #110f57; margin: 0 12px 0 0; }
+.MuiChip-root.primary-chips .MuiChip-deleteIcon:hover{ opacity: 0.75; }
+
 
 
 .upload-outline-btn{ display: inline-block; vertical-align: middle; position: relative; overflow: hidden; cursor: pointer; }
@@ -331,14 +346,19 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root.Mui-selected .MuiToggleButton-label .default, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root:hover .MuiToggleButton-label .default, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label .active{ opacity: 0; visibility: hidden; transform: scale(0); }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root.Mui-selected{ background: rgba(17, 15, 87, 0.1); border-color: transparent; }
 
+.added-skills { display: block; margin: 12px 0; max-width: 360px; }
+.added-skills li{ display: inline-block; vertical-align: top; margin: 0 12px 12px 0; }
 
+.certification-wrapper{ display: block; }
+.certification-wrapper li .certification-card{ max-width: 360px; margin-bottom: 15px; display: block; background-color: rgba(153, 152, 205, 0.1); border-radius: 8px; padding: 15px; }
+.certification-wrapper li .certification-card .certification-card-header{ display: block; position: relative; padding: 0 30px 0 0; margin-bottom: 4px; }
+.certification-wrapper li .certification-card .certification-card-header span{ font-size: 10px; letter-spacing: 1.5px; color: #686868; }
+.certification-wrapper li .certification-card .certification-card-header .btn-iconic{ position: absolute; right: 0; top: -3px; }
+.certification-wrapper li .certification-card .certification-title{ font-size: 16px; line-height: 20px; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 4px; }
+.certification-wrapper li .certification-card .certification-from{ color: #060606; font-size: 14px; line-height: 18px; }
 
-
-
-
-
-
-
+.add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label{ padding: 9px 10px;  }
+.add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label span{ text-transform: none; font-size: 16px; line-height: 20px; }
 
 
 
@@ -427,10 +447,15 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     h4{ font-size: 28px;line-height: 34px; }
     header{ padding: 10px 15px; }
     header .nav-brand img{ max-width: 100%; width: auto; height: 32px; }
-    .btn.MuiButton-root{ padding: 8px 12px; font-size: 14px; line-height: 18px; height: 34px; }
+    .btn.MuiButton-root{ padding: 9px 12px; font-size: 14px; line-height: 18px; height: 36px; }
 
+    .MuiChip-root.primary-chips .MuiChip-label{ font-size: 14px; line-height: 18px; padding: 8px 10px; }
+    .MuiChip-root.primary-chips .MuiChip-deleteIcon{ margin: 0 8px 0 0; width: 20px; }
+
+    .certification-wrapper li .certification-card{ padding: 10px; }
+    
     .main-content{ padding: 50px 0; }
-
+    
     .homepage-banner{ padding: 60px 15px 80px; }
     .homepage-banner h1{ font-size: 36px; line-height: 42px; max-width: 100%; }
     .homepage-banner .container-xl::after{ opacity: 0; display: none; }
@@ -449,7 +474,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .benefits-habura-card-wrapper .benefits-habura-card{ padding: 20px; margin-bottom: 20px; }
     .benefits-habura-card-wrapper .benefits-habura-card p{ line-height: 24px; font-size: 15px; }
     .benefits-habura-card-wrapper .benefits-habura-card img{ width: 54px; height: 54px; margin: 0 0 15px; }
-
+    
     p.colored-info{ margin: 10px 0; font-size: 14px; line-height: 22px; }
     .primary-listing{ margin: 10px 0; }
     .primary-listing li{ font-size: 14px; line-height: 20px; padding-left: 14px; }
@@ -475,6 +500,11 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic{ display: block; margin-bottom: 20px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic i{ min-width: 80px; width: 80px; max-width: 80px; height: 80px; margin: 0 0 10px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic i img{ width: 40px; height: 40px; }
+
+
+    .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary{ height: auto; }
+    .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label{ padding: 7px 14px; }
+    .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label span{ font-size: 14px; line-height: 18px; }
 }
 
 @media (max-width:575px) {
@@ -487,7 +517,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .homepage-banner h1 + p{ font-size: 14px; line-height: 20px; }
 
 
-
+    
     .content-page h4{ font-size: 22px; line-height: 28px; }
 
     .main-content{ padding: 30px 0; }
@@ -510,7 +540,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 4px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ width: 40px; height: 40px; min-height: 40px; margin-bottom: 10px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover{ box-shadow: none; } 
-    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ padding: 0 10px; margin: 0; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ padding: 0 10px; margin: 0; min-width: 40px; max-width: 40px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content{ padding: 0 15px 0 8px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title{ margin-bottom: 15px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title p{ font-size: 18px; line-height: 22px; }
@@ -526,7 +556,10 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .add-profile-stepper-wrapper .MuiTabs-root + div { min-width: calc(100% - 60px);}
 
     .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root + .MuiToggleButton-root{ margin-left: 10px; }
+    .added-skills li{ margin: 0 8px 8px 0; }
 
+    .MuiChip-root.primary-chips .MuiChip-label{ padding: 6px 10px; }
+    .MuiChip-root.primary-chips{ border-radius: 6px; }
 
 
 
