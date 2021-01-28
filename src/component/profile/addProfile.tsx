@@ -1,10 +1,4 @@
 import React, { Component } from 'react'
-// import Button from '@material-ui/core/Button';
-// import Tabs from '@material-ui/core/Tabs';
-// import Tab from '@material-ui/core/Tab';
-// import Typography from '@material-ui/core/Typography';
-// import Box from '@material-ui/core/Box';
-// import  TextField from '@material-ui/core/TextField';
 import { Button, Typography, Box, Tabs, Tab, TextField, RadioGroup, Radio, FormControlLabel, } from '@material-ui/core';
 import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
 
@@ -185,7 +179,7 @@ export default function AddProfile() {
 
                                     <TextField label="Profile Summary" className="form-control" multiline rows={3} variant="outlined" />
 
-                                    <Button className="btn btn-iconic-text" variant="contained" color="primary"><span>Next</span><img className="ms-xs-2 ms-1" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
+                                    <Button className="btn btn-iconic-text btn-lg" variant="contained" color="primary"><span>Next</span><img className="ms-xs-2 ms-1" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
 
                                 </div>
                             </div>
