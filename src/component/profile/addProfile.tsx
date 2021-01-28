@@ -17,11 +17,14 @@ export default function AddProfile() {
         setValue(newValue);
     };
 
-    const [alignment, setAlignment] = React.useState<string | null>('left');
+    const [alignment, setAlignment] = React.useState('');
 
     const handleAlignment = (event: React.MouseEvent<HTMLElement>, newAlignment: string | null) => {
-        setAlignment(newAlignment);
+        if (newAlignment !== null) {
+            setAlignment(newAlignment);
+        }
     };
+
 
     return (
         <>
@@ -139,8 +142,8 @@ export default function AddProfile() {
                                             <img src={require('../../assets/images/user-grey.svg').default} className="uploaded-img d-none" alt="" />
                                         </i>
                                         <div>
-                                            <input className="d-none" accept="image/*" id="chooseProfilePic" multiple type="file" />
-                                            <label htmlFor="chooseProfilePic">
+                                            <label htmlFor="chooseProfilePic" className="upload-outline-btn">
+                                                <input accept="image/*" id="chooseProfilePic" multiple type="file" />
                                                 <Button variant="outlined" color="primary">Choose File</Button>
                                             </label>
                                             <span>jpg or png. Max file size 500 KB</span>
@@ -191,12 +194,7 @@ export default function AddProfile() {
                                     <span>Education &amp; Degree</span>
                                 </div>
                                 <div className="tab-main-content">
-                                    <div className="choose-profile-pic">
-                                        <i>
-                                            <img src={require('../../assets/images/user-grey.svg')} alt="" />
-                                        </i>
 
-                                    </div>
                                 </div>
                             </div>
                         </TabPanel>
@@ -207,12 +205,7 @@ export default function AddProfile() {
                                     <span>Professional Skills</span>
                                 </div>
                                 <div className="tab-main-content">
-                                    <div className="choose-profile-pic">
-                                        <i>
-                                            <img src={require('../../assets/images/user-grey.svg')} alt="" />
-                                        </i>
 
-                                    </div>
                                 </div>
                             </div>
                         </TabPanel>
@@ -223,12 +216,7 @@ export default function AddProfile() {
                                     <span>Internship &amp; Jobs</span>
                                 </div>
                                 <div className="tab-main-content">
-                                    <div className="choose-profile-pic">
-                                        <i>
-                                            <img src={require('../../assets/images/user-grey.svg')} alt="" />
-                                        </i>
 
-                                    </div>
                                 </div>
                             </div>
                         </TabPanel>
@@ -239,12 +227,7 @@ export default function AddProfile() {
                                     <span>Job location,Timings etc</span>
                                 </div>
                                 <div className="tab-main-content">
-                                    <div className="choose-profile-pic">
-                                        <i>
-                                            <img src={require('../../assets/images/user-grey.svg')} alt="" />
-                                        </i>
 
-                                    </div>
                                 </div>
                             </div>
                         </TabPanel>
@@ -255,18 +238,12 @@ export default function AddProfile() {
                                     <span>General Details</span>
                                 </div>
                                 <div className="tab-main-content">
-                                    <div className="choose-profile-pic">
-                                        <i>
-                                            <img src={require('../../assets/images/user-grey.svg')} alt="" />
-                                        </i>
 
-                                    </div>
                                 </div>
                             </div>
                         </TabPanel>
                     </div>
                 </div>
-
             </div>
             {/* wrapper end */}
 

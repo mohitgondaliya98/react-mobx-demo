@@ -107,11 +107,11 @@ input[type=number]::-webkit-outer-spin-button {
 .MuiButton-text:hover{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important; }
 
 .MuiButton-outlinedPrimary{ border: 0!important; padding: 2px!important; border-radius: 6px!important;background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; overflow: hidden; }
-.MuiButton-outlinedPrimary .MuiButton-label{ background: #FFF; padding: 6px 20px; border-radius: 4px!important; }
+.MuiButton-outlinedPrimary .MuiButton-label{ font-family: ProximaNova-Semibold; font-weight: 600; background: #FFF; padding: 6px 20px; border-radius: 4px!important; }
 .MuiButton-outlinedPrimary:hover .MuiButton-label{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important;  }
 
 .btn-iconic-text{ display: flex; }
-.btn-iconic-text span, .btn-iconic-text img{ display: inline-block; vertical-align: middle; }
+.btn-iconic-text span, .btn-iconic-text img{ display: inline-block; vertical-align: middle; font-family: ProximaNova-Semibold; font-weight: 600; }
 .btn-iconic-text img{ height: 18px; width: 18px; } 
 
 .btn-lg{ font-size: 14px; line-height: 18px; height: 50px; padding: 12px 38px; }
@@ -123,6 +123,12 @@ input[type=number]::-webkit-outer-spin-button {
 .form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ color: #212121; font-size: 16px; line-height: 20px; height: 17px; }
 .form-control.MuiFormControl-root .MuiFormLabel-root{ color: rgba(104, 104, 104, 0.5); }
 .form-control.MuiFormControl-root .MuiInputBase-root textarea.MuiInputBase-input{ height: 63px; }
+
+
+.upload-outline-btn{ display: inline-block; vertical-align: middle; position: relative; overflow: hidden; cursor: pointer; }
+.upload-outline-btn input{ display: inline-block; vertical-align: middle; position: absolute; top: 0; bottom: 0; left: 0; right: 0; cursor: pointer; opacity: 0; z-index: 2; }
+.upload-outline-btn:hover .MuiButton-label{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important;  }
+.upload-outline-btn ::-webkit-file-upload-button { cursor:pointer; }
 
 
 /* radio-group */
@@ -284,6 +290,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 286px); }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ opacity: 1; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ display: flex; align-items: center; border: 1px solid #dadce0; position: relative; border-radius: 6px; padding: 22px 25px;min-width: 228px; max-width: 228px; overflow: hidden; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step.completed{ border: 1px solid #009fff; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step::before{ content: none; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #009fff; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i{ display: inline-block; vertical-align: top; position: relative; margin-right: 16px; width: 30px; height: 30px; display: inline-block; vertical-align: top; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 30px; height: 30px; display: block; margin: auto; transition: all 0.2s ease; }
@@ -301,7 +308,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step p span{ display: block; color: #d3d3d3; font-size: 14px; line-height: 18px; letter-spacing: -0.34px; font-family: ProximaNova-Regular; font-weight: 400; transition: all 0.2s ease;}
 
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTabs-indicator{ display: none; } 
-.add-profile-stepper-wrapper .MuiBox-root{ padding: 0; }
+.add-profile-stepper-wrapper .MuiBox-root, .add-profile-stepper-wrapper .MuiBox-root .MuiTypography-root{ padding: 0; }
 
 .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content{ padding: 0 50px; }
 .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title{ margin-bottom: 30px; }
@@ -317,7 +324,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root, .add-profile-stepper-wrapper .tab-main-content  .MuiButton-containedPrimary{ width: 360px; }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root + .MuiToggleButton-root{ margin-left: 12px; }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root { border: 1px solid #e7e4f1; border-radius: 10px; }
-.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root{ display: flex; justify-content: center; align-items: center; width: 54px; height: 54px; }
+.gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root{ display: flex; justify-content: center; align-items: center; width: 54px; height: 54px; padding: 0 11px; }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label{ display: flex; justify-content: center; align-items: center; position: relative; width: 54px; height: 54px; }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label img{ position: absolute; top: 11px; left: 0; right: 0; transition: all 0.2s ease-in-out; width: 30px; height: 30px; }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label .default, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root.Mui-selected .MuiToggleButton-label .active, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root:hover .MuiToggleButton-label .active{ opacity: 1; visibility: visible; transform: scale(1); }
@@ -389,16 +396,9 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     footer .secondary-footer{ padding: 5px 15px; }
     footer{ min-height: 121px; margin-top: -121px; }
 
-    .add-profile-stepper-wrapper{ padding: 0; }
-    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content{ padding: 0 15px; }
-    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .MuiTab-wrapper .tab-step::before{ content: none; }
-    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit .tab-step p{ display: none; }
-    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ min-width: auto; max-width: 100%; }
-    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ padding: 10px 15px; margin: -10px 0; }
-    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 12px; }
-    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i{ margin-right: 0; }
-    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ width: 24px; height: 24px; }
-    .add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 100px); }
+    .add-profile-stepper-wrapper{ padding: 0 15px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content{ padding: 0 30px; }
+    
 }
 
 @media (max-width:991px) {
@@ -410,6 +410,17 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .organization-testimonial-card .organization-details div h6{ font-size: 18px; line-height: 22px; }
     .organization-testimonial-card .organization-details i img, .organization-testimonial-card .organization-details i{ width: 54px; height: 54px; }
     .organization-testimonial-card .organization-details div{ padding: 3px 10px; }
+
+    .add-profile-stepper-wrapper{ padding: 0; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content{ padding: 0 15px 0 10px; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .MuiTab-wrapper .tab-step::before{ content: none; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit .tab-step p{ display: none; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ min-width: auto; max-width: 100%; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ padding: 10px 15px; margin: -10px 0; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 12px; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i{ margin-right: 0; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ width: 24px; height: 24px; }
+    .add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 100px); }
 }
 
 @media (max-width:767px) {
@@ -450,17 +461,26 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 
     .wrapper{ padding-bottom: 107px; }
     footer{ min-height: 107px; margin-top: -107px; }
-    footer .primary-footer{ padding: 12px 15px; }
-    footer .secondary-footer{ padding: 6px 15px; }
+    footer .primary-footer{ padding: 12px 0; }
+    footer .secondary-footer{ padding: 6px 0; }
     footer .primary-footer .nav-brand img{ height: 32px; width: auto; max-width: 100%; }
     footer .primary-footer .footer-links li a{ font-size: 14px; line-height: 18px; }
     footer .secondary-footer .social-links li a{ padding: 10px; }
     footer .secondary-footer .social-links li a:hover::before{ width: 38px; height: 38px; }
     footer .secondary-footer p{ font-size: 12px; line-height: 16px; }
+
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title{ margin-bottom: 20px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title p{ font-size: 22px; line-height: 26px; }
+
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic{ display: block; margin-bottom: 20px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic i{ min-width: 80px; width: 80px; max-width: 80px; height: 80px; margin: 0 0 10px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic i img{ width: 40px; height: 40px; }
 }
 
 @media (max-width:575px) {
     header .right-handle .btn.MuiButton-root{ height: auto; padding: 6px 9px; }
+    header .right-handle .MuiButton-outlinedPrimary{ height: auto; }
+    header .right-handle .MuiButton-outlinedPrimary .MuiButton-label{ height: auto; padding: 3px 9px; }
 
     .homepage-banner{ padding: 50px 10px; }
     .homepage-banner h1{ font-size: 28px; line-height: 34px; }
@@ -484,6 +504,45 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     footer .primary-footer .footer-links li + li{ margin-left: 0; }
     footer .primary-footer .footer-links li{ margin: 2px 12px 2px 0; } 
     footer .secondary-footer .social-links{ justify-content: center; }
+
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root, .add-profile-stepper-wrapper .tab-main-content .MuiButton-containedPrimary{ width: 237px; }
+
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 4px; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ width: 40px; height: 40px; min-height: 40px; margin-bottom: 10px; }
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover{ box-shadow: none; } 
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ padding: 0 10px; margin: 0; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content{ padding: 0 15px 0 8px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title{ margin-bottom: 15px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title p{ font-size: 18px; line-height: 22px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title span{ font-size: 14px; line-height: 18px; }
+
+    .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label{ width: 40px; height: 40px; }
+    .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label img{ width: 20px; height: 20px; left: -2px; top: 9px; }
+
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic div > span{ font-size: 12px; line-height: 16px; margin-top: 4px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic .MuiButton-outlinedPrimary .MuiButton-label{ padding: 2px 12px; }
+
+    .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ width: 20px; height: 20px; }
+    .add-profile-stepper-wrapper .MuiTabs-root + div { min-width: calc(100% - 60px);}
+
+    .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root + .MuiToggleButton-root{ margin-left: 10px; }
+
+
+
+
+
+
+
+
+
+
+    .form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ padding: 15px 16px; }
+    .form-control.MuiFormControl-root .MuiInputBase-root { padding: 0; }
+    .form-control.MuiFormControl-root .MuiFormLabel-root{ font-size: 14px; line-height: 18px; transform: translate(14px, 14px) scale(1); }
+    .form-control.MuiFormControl-root .MuiFormLabel-root.MuiInputLabel-shrink{ transform: translate(16px, -6px) scale(0.82); }
+
+    .radio-group label{ font-size: 14px; line-height: 18px; } 
+
 }
 
 @media (max-width: 425px) {
