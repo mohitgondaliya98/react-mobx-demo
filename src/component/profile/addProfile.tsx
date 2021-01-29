@@ -1,8 +1,17 @@
 import React from 'react'
-import { Button, Box, Tabs, Tab, TextField, Chip, IconButton, Menu, MenuItem } from '@material-ui/core';
+import { Button, Box, Tabs, Tab, TextField, Chip, IconButton, Menu, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions, FormControl, InputLabel, Select, InputAdornment, FilledInput, OutlinedInput } from '@material-ui/core';
 import { Autocomplete, ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import AddIcon from '@material-ui/icons/Add';
+import CloseIcon from '@material-ui/icons/Close';
+
+
+// import 'date-fns';
+// import DateFnsUtils from '@date-io/date-fns';
+// import {
+//     MuiPickersUtilsProvider,
+//     KeyboardDatePicker,
+// } from '@material-ui/pickers';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -18,13 +27,11 @@ interface ChipData {
 export default function AddProfile() {
 
     const [value, setValue] = React.useState(0);
-
     const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
         setValue(newValue);
     };
 
     const [alignment, setAlignment] = React.useState('');
-
     const handleAlignment = (event: React.MouseEvent<HTMLElement>, newAlignment: string | null) => {
         if (newAlignment !== null) {
             setAlignment(newAlignment);
@@ -36,7 +43,6 @@ export default function AddProfile() {
         { key: 0, label: 'Graphic Designing' },
         { key: 1, label: 'Marketing' },
     ]);
-
     const handleDelete = (chipToDelete: ChipData) => () => {
         setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
     };
@@ -47,6 +53,14 @@ export default function AddProfile() {
     };
     const moreMenuhandleClose = () => {
         setmoreMenuAnchorEl(null);
+    };
+
+    const [addSkillModalopen, setOpen] = React.useState(false);
+    const addSkillModalhandleClickOpen = () => {
+        setOpen(true);
+    };
+    const addSkillModalhandleClose = () => {
+        setOpen(false);
     };
 
 
@@ -96,7 +110,7 @@ export default function AddProfile() {
                                 </div>
                             } {...a11yProps(0)} />
                             <Tab label={
-                                <div className="tab-step">
+                                <div className="tab-step completed">
                                     <i>
                                         <img className="default" src={require('../../assets/images/qualification-grey.svg').default} alt="" />
                                         <img className="active" src={require('../../assets/images/qualification-primary.svg').default} alt="" />
@@ -230,7 +244,7 @@ export default function AddProfile() {
                                 </div>
                                 <div className="tab-main-content">
                                     <Autocomplete
-                                        className="form-control"
+                                        className="form-control autocomplete-control"
                                         freeSolo
                                         options={skills.map((option) => option.title)}
                                         renderInput={(params) => (
@@ -262,9 +276,9 @@ export default function AddProfile() {
                                                     <Menu
                                                         id="more-menu"
                                                         anchorEl={moreMenu}
-                                                        keepMounted
                                                         open={Boolean(moreMenu)}
                                                         onClose={moreMenuhandleClose}
+                                                        className="primary-menu"
                                                     >
                                                         <MenuItem onClick={moreMenuhandleClose}>Edit</MenuItem>
                                                         <MenuItem onClick={moreMenuhandleClose}>Delete</MenuItem>
@@ -276,10 +290,45 @@ export default function AddProfile() {
                                         </li>
                                     </ul>
 
-                                    <Button className="btn btn-iconic-text d-block mb-3" variant="outlined" color="primary" startIcon={<AddIcon />}><span>Add more</span></Button>
+                                    <Button className="btn btn-iconic-text d-block mb-3" onClick={addSkillModalhandleClickOpen} variant="outlined" color="primary" startIcon={<AddIcon />}><span>Add more</span></Button>
 
                                     <Button className="btn btn-iconic-text d-block btn-lg" variant="contained" color="primary"><span>Next</span><img className="ms-xs-2 ms-1" src={require('../../assets/images/arrow-pointing-to-right.svg').default} alt="" /></Button>
 
+                                    <Dialog open={addSkillModalopen} onClose={addSkillModalhandleClose} fullWidth={true} className="primary-modal" aria-labelledby="Add-Certification-Modal" maxWidth="sm">
+                                        <DialogTitle>
+                                            <h6>Add Certification</h6>
+                                            <IconButton aria-label="close" onClick={addSkillModalhandleClose}>
+                                                <CloseIcon />
+                                            </IconButton>
+                                        </DialogTitle>
+                                        <DialogContent>
+                                            <TextField className="form-control" label="Course" variant="outlined" />
+
+                                            <TextField className="form-control" label="Organization" variant="outlined" />
+
+                                            <TextField className="form-control native-datepicker" label="Date" defaultValue="" type="date" variant="outlined" InputLabelProps={{ shrink: true, }} />
+
+                                            <FormControl className="form-control have-suffix" variant="outlined">
+                                                <InputLabel htmlFor="outlined-adornment-password">Upload Certificate</InputLabel>
+                                                <OutlinedInput
+                                                    id="outlined-adornment-password"
+                                                    labelWidth={130}
+                                                    endAdornment={
+                                                        <InputAdornment position="end">
+                                                            <label htmlFor="chooseProfilePic" className="upload-outline-btn">
+                                                                <input accept="image/*" id="chooseProfilePic" multiple type="file" />
+                                                                <Button variant="outlined" color="primary" className="btn-sm">Upload</Button>
+                                                            </label>
+                                                        </InputAdornment>
+                                                    }
+                                                />
+                                            </FormControl>
+                                        </DialogContent>
+                                        <DialogActions>
+                                            <Button className="btn btn-lg" variant="outlined" color="primary" onClick={addSkillModalhandleClose}>Cancel</Button>
+                                            <Button className="btn btn-lg" onClick={addSkillModalhandleClose} variant="contained" color="primary">Add</Button>
+                                        </DialogActions>
+                                    </Dialog>
                                 </div>
                             </div>
                         </TabPanel>
@@ -324,49 +373,45 @@ export default function AddProfile() {
             {/* Footer start */}
             <footer>
                 <div className="primary-footer">
-                    <div className="container-xl">
-                        <div className="row">
-                            <div className="col-sm-auto">
-                                <a href="/" className="nav-brand" title="Hubura">
-                                    <img src={require('../../assets/images/logo.svg').default} alt="" />
-                                </a>
-                            </div>
-                            <div className="col-sm d-flex justify-content-sm-end align-items-center">
-                                <ul className="footer-links">
-                                    <li>
-                                        <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="/term-and-condition" title="Terms and Conditions">Terms and Conditions</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Cookie Policy">Cookie Policy</a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div className="row">
+                        <div className="col-sm-auto">
+                            <a href="/" className="nav-brand" title="Hubura">
+                                <img src={require('../../assets/images/logo.svg').default} alt="" />
+                            </a>
+                        </div>
+                        <div className="col-sm d-flex justify-content-sm-end align-items-center">
+                            <ul className="footer-links">
+                                <li>
+                                    <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="/term-and-condition" title="Terms and Conditions">Terms and Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Cookie Policy">Cookie Policy</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div className="secondary-footer">
-                    <div className="container-xl">
-                        <div className="row">
-                            <div className="col-auto">
-                                <p>&copy; Hubura. All Rights Reserved</p>
-                            </div>
-                            <div className="col">
-                                <ul className="social-links">
-                                    <li>
-                                        <a href="#" title="Facebook">
-                                            <img src={require('../../assets/images/facebook.svg').default} alt="facebook" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Linkedin">
-                                            <img src={require('../../assets/images/linkedin.svg').default} alt="linkedin" />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div className="row">
+                        <div className="col-auto">
+                            <p>&copy; Hubura. All Rights Reserved</p>
+                        </div>
+                        <div className="col">
+                            <ul className="social-links">
+                                <li>
+                                    <a href="#" title="Facebook">
+                                        <img src={require('../../assets/images/facebook.svg').default} alt="facebook" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Linkedin">
+                                        <img src={require('../../assets/images/linkedin.svg').default} alt="linkedin" />
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

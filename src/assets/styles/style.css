@@ -72,12 +72,9 @@ input[type=text], input[type=email], input[type=password], textarea { -webkit-ap
 select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
 option:not(:checked) { color: black; }
 input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
-}
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; margin: 0;  }
+input[type="date"]::-webkit-calendar-picker-indicator{ opacity: 0;-webkit-appearance: none; -moz-appearance: none; appearance: none; margin: 0;  }
+
 
 .bold{font-weight: 700;}
 .extra-bold{font-weight: 800;}
@@ -106,9 +103,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 .MuiButton-text:hover{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important; }
 
-.MuiButton-outlinedPrimary{ border: 0!important; padding: 2px!important; border-radius: 6px!important;background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; overflow: hidden; }
+/* .MuiButton-outlinedPrimary{ border: 0!important; padding: 2px!important; border-radius: 6px!important;background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; overflow: hidden; }
 .MuiButton-outlinedPrimary .MuiButton-label{ width: auto; font-family: ProximaNova-Semibold; font-weight: 600; background: #FFF; padding: 6px 20px; border-radius: 4px!important; display: flex; justify-content: flex-start; align-items: center; }
-.MuiButton-outlinedPrimary:hover .MuiButton-label{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important;  }
+.MuiButton-outlinedPrimary:hover .MuiButton-label{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important;  } */
+
+.MuiButton-outlinedPrimary{ border: 0!important; padding: 11px 20px!important; border-radius: 6px!important; border: 1px solid #110f57!important; overflow: hidden; }
+.MuiButton-outlinedPrimary .MuiButton-label{ font-family: ProximaNova-Semibold; font-weight: 600; color: #110f57; }
+.MuiButton-outlinedPrimary:hover {background: #110f57!important; }
+.MuiButton-outlinedPrimary:hover .MuiButton-label{ color: #FFF; }
+
 
 .btn-iconic-text{ display: flex; }
 .btn-iconic-text > span, .btn-iconic-text img{ display: inline-block; vertical-align: middle; font-family: ProximaNova-Semibold; font-weight: 600; }
@@ -117,8 +120,11 @@ input[type=number]::-webkit-outer-spin-button {
 .btn-iconic-text .MuiButton-startIcon svg{ font-size: 16px; }
 .btn-iconic-text .MuiButton-label span{ display: inline-block; vertical-align: middle; font-family: ProximaNova-Semibold; font-weight: 600; }
 
+.btn-lg{ height: 50px; padding: 12px 38px!important; }
+.btn-lg .MuiButton-label{ font-size: 14px; line-height: 18px; }
 
-.btn-lg{ font-size: 14px; line-height: 18px; height: 50px; padding: 12px 38px; }
+.btn-sm{ height: 34px; padding: 7px 14px!important; }
+.btn-sm .MuiButton-label{ font-size: 12px; line-height: 16px; }
 
 .form-control.MuiFormControl-root{ display: block; width: 100%; margin-bottom: 20px; }
 .form-control.MuiFormControl-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{ border-color: rgb(17 15 87); }
@@ -126,10 +132,28 @@ input[type=number]::-webkit-outer-spin-button {
 .form-control.MuiFormControl-root .MuiInputBase-root.Mui-focused .MuiOutlinedInput-notchedOutline{  border-color: rgb(17 15 87); }
 .form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ color: #212121; font-size: 16px; line-height: 20px; height: 17px; }
 .form-control.MuiFormControl-root .MuiFormLabel-root{ color: rgba(104, 104, 104, 0.5); }
+.form-control.MuiFormControl-root .MuiInputBase-root{ width: 100%; }
 .form-control.MuiFormControl-root .MuiInputBase-root textarea.MuiInputBase-input{ height: 63px; }
 
 
-.MuiAutocomplete-root .MuiFormControl-root .MuiFormHelperText-root{ font-size: 13px; line-height: 17px; color: #686868; margin: 5px 0 0; padding: 0; }
+.form-control.MuiAutocomplete-root{ display: block; width: 100%; margin-bottom: 20px; }
+
+.form-control.MuiFormControl-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{ border-color: rgb(17 15 87); }
+.form-control.MuiFormControl-root .MuiFormControl-root .MuiAutocomplete-inputRoot{ padding: 0px!important; }
+
+.autocomplete-control.MuiAutocomplete-root .MuiFormControl-root .MuiFormHelperText-root{ font-size: 13px; line-height: 17px; color: #686868; margin: 5px 0 0; padding: 0; }
+.autocomplete-control .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input{ padding: 8.5px 4px!important; }
+
+.native-datepicker.form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ background: url('../images/calendar-primary.svg') no-repeat right 13px center; background-size: 18px 18px; padding-right: 40px; }
+
+.MuiFormControl-root.form-control.with-outlined-button .MuiOutlinedInput-adornedEnd{ padding-right: 10px; }
+.MuiFormControl-root.form-control.with-outlined-button .MuiOutlinedInput-adornedEnd .MuiInputAdornment-root .upload-outline-btn .MuiButton-outlinedPrimary{ padding: 7px 14px!important; }
+
+/* Mat Menu */
+.MuiPopover-root.primary-menu .MuiMenu-paper.MuiPopover-paper{ margin-top: 40px; min-width: 130px; border-radius: 8px; box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.09); background-color: #ffffff; }
+.MuiPopover-root.primary-menu .MuiMenu-paper.MuiPopover-paper .MuiListItem-button{ font-size: 17px; line-height: 26px; color: #212121; min-height: auto!important; background: none!important; }
+.MuiPopover-root.primary-menu .MuiMenu-paper.MuiPopover-paper .MuiListItem-button:hover{ color: #da2b2b; }
+.MuiPopover-root.primary-menu .MuiMenu-paper.MuiPopover-paper .MuiListItem-button .MuiTouchRipple-root{ display: none!important; }
 
 
 /* Chips */
@@ -138,19 +162,55 @@ input[type=number]::-webkit-outer-spin-button {
 .MuiChip-root.primary-chips .MuiChip-deleteIcon{ color: #110f57; margin: 0 12px 0 0; }
 .MuiChip-root.primary-chips .MuiChip-deleteIcon:hover{ opacity: 0.75; }
 
-
-
-.upload-outline-btn{ display: inline-block; vertical-align: middle; position: relative; overflow: hidden; cursor: pointer; }
+/* Upload outline Button  */
+.upload-outline-btn{ display: inline-block; vertical-align: middle; position: relative; overflow: hidden; cursor: pointer; border-radius: 6px; }
 .upload-outline-btn input{ display: inline-block; vertical-align: middle; position: absolute; top: 0; bottom: 0; left: 0; right: 0; cursor: pointer; opacity: 0; z-index: 2; }
-.upload-outline-btn:hover .MuiButton-label{ background-image: linear-gradient(106deg, #302d89, #0b65b2 99%)!important; color: #FFF!important;  }
+.upload-outline-btn .MuiButton-outlinedPrimary{ padding: 7px 17px!important; }
+.upload-outline-btn:hover{ background: #302d89; color: #FFF;  }
+.upload-outline-btn:hover .MuiButton-label{ color: #FFF; }
 .upload-outline-btn ::-webkit-file-upload-button { cursor:pointer; }
-
 
 /* radio-group */
 .radio-group{ margin-bottom: 20px; }
 .radio-group label{ font-size: 16px; line-height: 20px; color: #686868; display: block; margin-bottom: 8px; }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* primary-modal */
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiDialog-paperWidthSm{ max-width: 440px; }
+
+.MuiBackdrop-root{ background-color: rgba(0, 0, 0, 0.55);}
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root{ background: #FFF; box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.24); border-radius: 8px; margin: 15px; }
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paperFullWidth{ width: calc(100% - 30px); }
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paperScrollPaper{ max-height: calc(100% - 30px); }
+
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root { padding: 34px 40px 16px; }
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root .MuiTypography-root{ display: flex; justify-content: space-between; align-items: center; padding: 0; }
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root .MuiTypography-root h6{ font-size: 24px; line-height: 28px; padding: 0; font-family: ProximaNova-Bold; font-weight: 700; color: #212121; }
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root .MuiTypography-root .MuiIconButton-root{ padding: 6px; font-size: 16px; color: #110f57; margin-right: -8px; }
+
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogContent-root{ padding: 0 40px; overflow: visible; }
+
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogActions-root{ padding: 0 40px 40px; }
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogActions-root .MuiButtonBase-root{ width: 50%; }
 
 
 
@@ -191,8 +251,6 @@ footer .secondary-footer .social-links li a{ display: flex; align-items: center;
 footer .secondary-footer .social-links li a::before{ content: ""; position: absolute; top: 50%; left: 50%; right: 50%; bottom: 50%; transform-origin: center; background: rgb(17 15 87 / 20%); border-radius: 50%; width: 0; height: 0; transform: scale(0); transition: all 0.2s ease-in-out; }
 footer .secondary-footer .social-links li a:hover::before{ top: 0; bottom: 0; left: 0; right: 0; transform: scale(1); width: 42px; height: 42px; }
 footer .secondary-footer .social-links li a:hover{ color: #302d89; }
-
-
 
 /* Homepage 
 --------------------------------------------------------------------------------------------------------*/
@@ -271,9 +329,8 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 .hot-job-card .organization-details div h6{ font-size: 20px; line-height: 26px; color: #212121; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 0; margin-bottom: 4px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 200px; }
 .hot-job-card .organization-details div span{ display: block; font-size: 18px; line-height: 22px;  text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 200px;  }
 .hot-job-card .job-description{ font-size: 16px; line-height: 28px; color: #424242; height: 248px; overflow: hidden; }
-.hot-job-card button{ width: 100%;display: block; font-weight: 600;font-family: ProximaNova-Semibold; }
+.hot-job-card .MuiButton-root{ width: 100%;display: block; font-weight: 600;font-family: ProximaNova-Semibold; padding: 7px 20px!important; }
 .hot-job-card:hover{ box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 77px 0 rgba(0, 0, 0, 0.1); border-color: transparent; }
-
 
 /* benefits-habura  */
 .benefits-habura-wrapper{ position: relative; margin-bottom: 80px; }
@@ -285,7 +342,6 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 .benefits-habura-card-wrapper .benefits-habura-card img{ width: 60px; height: 60px; display: block; margin: 0 0 20px; }
 .benefits-habura-card-wrapper .benefits-habura-card h6{ font-size: 20px; line-height: 26px; color: #110f57; margin: 0 0 8px; padding: 0; }
 .benefits-habura-card-wrapper .benefits-habura-card p{ color: #424242; line-height: 26px; font-size: 16px; padding: 0; }
-
 
 /* main-content */
 .main-content{ padding: 50px 0; }
@@ -302,7 +358,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 
 /* add-profile-stepper */
 .add-profile-stepper-wrapper { display: flex; align-items: flex-start; padding: 0 35px; }
-.add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 286px); }
+/* .add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 286px); } */
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ opacity: 1; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ display: flex; align-items: center; border: 1px solid #dadce0; position: relative; border-radius: 6px; padding: 22px 25px;min-width: 228px; max-width: 228px; overflow: hidden; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step.completed{ border: 1px solid #009fff; }
@@ -310,12 +366,12 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i{ display: inline-block; vertical-align: top; position: relative; margin-right: 16px; width: 30px; height: 30px; display: inline-block; vertical-align: top; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 30px; height: 30px; display: block; margin: auto; transition: all 0.2s ease; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img.active, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step i img.default, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step i img.default{ opacity: 0; visibility: hidden; transform: scale(0); }
-.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step i img.active, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step i img.active { opacity: 1; visibility: visible; transform: scale(1); }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step i img.active, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step i img.active, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit .tab-step.completed i img.active { opacity: 1; visibility: visible; transform: scale(1); }
 
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .MuiTab-wrapper .tab-step::before{ content: ""; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover{ box-shadow: 0 2px 7px 0 rgba(100, 100, 100, 0.2); transition: all 0.2s ease; }
-.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step p, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step p{ color: #110f57; }
-.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step p span, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step p span{ color: #838e9b; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step p, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step p, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit .tab-step.completed p{ color: #110f57; }
+.add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected .tab-step p span, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover .tab-step p span, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit .tab-step.completed p span{ color: #838e9b; }
 
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ padding: 10px 20px; margin: -10px -17px; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ padding: 0; margin-bottom: 15px; border-radius: 6px; min-width: 280px; max-width: 280px; }
@@ -357,24 +413,11 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .certification-wrapper li .certification-card .certification-title{ font-size: 16px; line-height: 20px; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 4px; }
 .certification-wrapper li .certification-card .certification-from{ color: #060606; font-size: 14px; line-height: 18px; }
 
-.add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label{ padding: 9px 10px;  }
+/* .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label{ } */
 .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label span{ text-transform: none; font-size: 16px; line-height: 20px; }
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive Media Queries
 --------------------------------------------------------------------------------------------------------*/
-@media (max-width:1600px) {
-}
-
 @media (min-width: 1400px){
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { max-width: 1170px;}
 }
@@ -406,7 +449,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .hot-job-card .organization-details div h6{ font-size: 18px; line-height: 22px; }
     .hot-job-card .organization-details div span{ font-size: 16px; line-height: 20px; }
     .hot-job-card .job-description{ font-size: 15px; line-height: 24px; height: auto; padding-bottom: 30px; }
-    .hot-job-card .MuiButton-outlinedPrimary .MuiButton-label{ padding: 5px 0; }
+    /* .hot-job-card .MuiButton-outlinedPrimary .MuiButton-label{ padding: 5px 0; } */
 
     p.colored-info{ margin: 20px 0; padding: 15px 20px; line-height: 24px; }
     .main-content{ padding: 50px 0; }
@@ -440,19 +483,24 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 12px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i{ margin-right: 0; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ width: 24px; height: 24px; }
-    .add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 100px); }
+    /* .add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 100px); } */
+
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic .MuiButton-outlinedPrimary{ padding: 6px 12px!important; }
+
+
+    .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root{ padding: 24px; }
+    .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogContent-root{ padding: 0 24px; }
+    .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogActions-root{ padding: 0 24px 24px; }
 }
 
 @media (max-width:767px) {
     h4{ font-size: 28px;line-height: 34px; }
     header{ padding: 10px 15px; }
     header .nav-brand img{ max-width: 100%; width: auto; height: 32px; }
-    .btn.MuiButton-root{ padding: 9px 12px; font-size: 14px; line-height: 18px; height: 36px; }
+    .btn.MuiButton-root{ padding: 9px 12px; font-size: 14px; line-height: 18px; height: auto; }
 
     .MuiChip-root.primary-chips .MuiChip-label{ font-size: 14px; line-height: 18px; padding: 8px 10px; }
     .MuiChip-root.primary-chips .MuiChip-deleteIcon{ margin: 0 8px 0 0; width: 20px; }
-
-    .certification-wrapper li .certification-card{ padding: 10px; }
     
     .main-content{ padding: 50px 0; }
     
@@ -470,7 +518,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .benefits-habura-wrapper{ margin-bottom: 40px; }
 
     .hot-job-card{ margin-bottom: 20px; }
-
+    
     .benefits-habura-card-wrapper .benefits-habura-card{ padding: 20px; margin-bottom: 20px; }
     .benefits-habura-card-wrapper .benefits-habura-card p{ line-height: 24px; font-size: 15px; }
     .benefits-habura-card-wrapper .benefits-habura-card img{ width: 54px; height: 54px; margin: 0 0 15px; }
@@ -483,44 +531,47 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .content-page h4{ padding-bottom: 12px; }
     .content-page h6{ font-size: 16px; line-height: 22px; }
     .content-page p{ font-size: 14px; line-height: 22px; }
-
+    
     .wrapper{ padding-bottom: 107px; }
     footer{ min-height: 107px; margin-top: -107px; }
-    footer .primary-footer{ padding: 12px 0; }
-    footer .secondary-footer{ padding: 6px 0; }
+    footer .primary-footer{ padding: 12px 15px; }
+    footer .secondary-footer{ padding: 6px 15px; }
     footer .primary-footer .nav-brand img{ height: 32px; width: auto; max-width: 100%; }
     footer .primary-footer .footer-links li a{ font-size: 14px; line-height: 18px; }
     footer .secondary-footer .social-links li a{ padding: 10px; }
     footer .secondary-footer .social-links li a:hover::before{ width: 38px; height: 38px; }
     footer .secondary-footer p{ font-size: 12px; line-height: 16px; }
-
+    
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title{ margin-bottom: 20px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title p{ font-size: 22px; line-height: 26px; }
-
+    
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic{ display: block; margin-bottom: 20px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic i{ min-width: 80px; width: 80px; max-width: 80px; height: 80px; margin: 0 0 10px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic i img{ width: 40px; height: 40px; }
+    
+    .certification-wrapper li .certification-card{ padding: 10px; }
 
-
-    .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary{ height: auto; }
-    .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label{ padding: 7px 14px; }
+    .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary{ height: auto; padding: 9px 12px!important; }
+    /* .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label{ padding: 7px 14px; } */
     .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label span{ font-size: 14px; line-height: 18px; }
+
+    .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root .MuiTypography-root h6{ font-size: 20px; line-height: 24px; }
+    .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root{ padding: 15px; }
+    .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogContent-root{ padding: 0 15px; }
+    .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogActions-root{ padding: 0 15px 15px; }
 }
 
 @media (max-width:575px) {
     header .right-handle .btn.MuiButton-root{ height: auto; padding: 6px 9px; }
     header .right-handle .MuiButton-outlinedPrimary{ height: auto; }
-    header .right-handle .MuiButton-outlinedPrimary .MuiButton-label{ height: auto; padding: 3px 9px; }
+    header .right-handle .MuiButton-outlinedPrimary{ height: auto; padding: 3px 9px!important; }
 
     .homepage-banner{ padding: 50px 10px; }
-    .homepage-banner h1{ font-size: 28px; line-height: 34px; }
+    .homepage-banner h1{ font-size: 32px; line-height: 38px; }
     .homepage-banner h1 + p{ font-size: 14px; line-height: 20px; }
-
-
     
-    .content-page h4{ font-size: 22px; line-height: 28px; }
-
     .main-content{ padding: 30px 0; }
+    .content-page h4{ font-size: 22px; line-height: 28px; }
 
     .organization-testimonial-card .organization-details i{ display: block;  margin: 0 0 10px;}
     .organization-testimonial-card .organization-details div{ display: block; padding: 0; }
@@ -535,14 +586,14 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     footer .primary-footer .footer-links li{ margin: 2px 12px 2px 0; } 
     footer .secondary-footer .social-links{ justify-content: center; }
 
+    .add-profile-stepper-wrapper .MuiBox-root{ min-width: calc(100% - 60px); }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root, .add-profile-stepper-wrapper .tab-main-content .MuiButton-containedPrimary{ width: 237px; }
-
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 4px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ width: 40px; height: 40px; min-height: 40px; margin-bottom: 10px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover{ box-shadow: none; } 
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ padding: 0 10px; margin: 0; min-width: 40px; max-width: 40px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content{ padding: 0 15px 0 8px; }
-    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title{ margin-bottom: 15px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title{ margin-bottom: 30px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title p{ font-size: 18px; line-height: 22px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .tab-title span{ font-size: 14px; line-height: 18px; }
 
@@ -550,10 +601,10 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label img{ width: 20px; height: 20px; left: -2px; top: 9px; }
 
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic div > span{ font-size: 12px; line-height: 16px; margin-top: 4px; }
-    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic .MuiButton-outlinedPrimary .MuiButton-label{ padding: 2px 12px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic .MuiButton-outlinedPrimary{ padding: 4px 12px!important; }
 
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ width: 20px; height: 20px; }
-    .add-profile-stepper-wrapper .MuiTabs-root + div { min-width: calc(100% - 60px);}
+    .add-profile-stepper-wrapper .MuiTabs-root div .MuiBox-root{ min-width: calc(100% - 60px); }
 
     .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root + .MuiToggleButton-root{ margin-left: 10px; }
     .added-skills li{ margin: 0 8px 8px 0; }
@@ -561,21 +612,17 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .MuiChip-root.primary-chips .MuiChip-label{ padding: 6px 10px; }
     .MuiChip-root.primary-chips{ border-radius: 6px; }
 
-
-
-
-
-
-
-
-
-    .form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ padding: 15px 16px; }
+    .form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ padding: 15.5px 16px; }
     .form-control.MuiFormControl-root .MuiInputBase-root { padding: 0; }
-    .form-control.MuiFormControl-root .MuiFormLabel-root{ font-size: 14px; line-height: 18px; transform: translate(14px, 14px) scale(1); }
+    .form-control.MuiFormControl-root .MuiFormLabel-root{ font-size: 14px; line-height: 18px; transform: translate(16px, 14px) scale(1); }
     .form-control.MuiFormControl-root .MuiFormLabel-root.MuiInputLabel-shrink{ transform: translate(16px, -6px) scale(0.82); }
 
-    .radio-group label{ font-size: 14px; line-height: 18px; } 
+    .autocomplete-control .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input{ padding: 5.5px 7px!important; }
+    .autocomplete-control .MuiFormLabel-root{ font-size: 14px; line-height: 18px; transform: translate(16px, 14px) scale(1); }
+    .autocomplete-control .MuiFormLabel-root.MuiInputLabel-shrink{ transform: translate(16px, -6px) scale(0.82); }
 
+    .radio-group label{ font-size: 14px; line-height: 18px; } 
+    .form-control.MuiFormControl-root.have-suffix .MuiInputBase-root{ padding-right: 6px; }
 }
 
 @media (max-width: 425px) {
@@ -583,4 +630,5 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .banner-search .banner-select-search input{ border-left: 0; border-top: 1px solid #efefef; margin: 4px 0 0; padding: 4px 0 0; }
     .banner-search .MuiFormControl-root.country-select { min-width: calc(100% - 25px); max-width: 100%;}
     .banner-search .banner-select-search .location{ width: 20px; height: 20px; }
+
 }

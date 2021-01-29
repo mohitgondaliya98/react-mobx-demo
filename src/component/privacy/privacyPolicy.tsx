@@ -81,49 +81,45 @@ export class privacyPolicy extends Component {
                 {/* Footer start */}
                 <footer>
                     <div className="primary-footer">
-                        <div className="container-xl">
-                            <div className="row">
-                                <div className="col-sm-auto">
-                                    <a href="/" className="nav-brand" title="Hubura">
-                                        <img src={require('../../assets/images/logo.svg').default} alt="" />
-                                    </a>
-                                </div>
-                                <div className="col-sm d-flex justify-content-sm-end align-items-center">
-                                    <ul className="footer-links">
-                                        <li>
-                                            <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
-                                        </li>
-                                        <li>
-                                            <a href="/term-and-condition" title="Terms and Conditions">Terms and Conditions</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Cookie Policy">Cookie Policy</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div className="row">
+                            <div className="col-sm-auto">
+                                <a href="/" className="nav-brand" title="Hubura">
+                                    <img src={require('../../assets/images/logo.svg').default} alt="" />
+                                </a>
+                            </div>
+                            <div className="col-sm d-flex justify-content-sm-end align-items-center">
+                                <ul className="footer-links">
+                                    <li>
+                                        <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="/term-and-condition" title="Terms and Conditions">Terms and Conditions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Cookie Policy">Cookie Policy</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div className="secondary-footer">
-                        <div className="container-xl">
-                            <div className="row">
-                                <div className="col-auto">
-                                    <p>&copy; Hubura. All Rights Reserved</p>
-                                </div>
-                                <div className="col">
-                                    <ul className="social-links">
-                                        <li>
-                                            <a href="#" title="Facebook">
-                                                <img src={require('../../assets/images/facebook.svg').default} alt="facebook" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Linkedin">
-                                                <img src={require('../../assets/images/linkedin.svg').default} alt="linkedin" />
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div className="row">
+                            <div className="col-auto">
+                                <p>&copy; Hubura. All Rights Reserved</p>
+                            </div>
+                            <div className="col">
+                                <ul className="social-links">
+                                    <li>
+                                        <a href="#" title="Facebook">
+                                            <img src={require('../../assets/images/facebook.svg').default} alt="facebook" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Linkedin">
+                                            <img src={require('../../assets/images/linkedin.svg').default} alt="linkedin" />
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
