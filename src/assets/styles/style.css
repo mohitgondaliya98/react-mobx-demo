@@ -130,7 +130,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{ opacity: 0;-webkit-appear
 .form-control.MuiFormControl-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{ border-color: rgb(17 15 87); }
 .form-control.MuiFormControl-root .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline{ border-color: #e7e4f1; }
 .form-control.MuiFormControl-root .MuiInputBase-root.Mui-focused .MuiOutlinedInput-notchedOutline{  border-color: rgb(17 15 87); }
-.form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ color: #212121; font-size: 16px; line-height: 20px; height: 17px; }
+.form-control.MuiFormControl-root .MuiInputBase-root .MuiInputBase-input{ color: #212121; font-size: 16px; line-height: 20px; height: 17px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .form-control.MuiFormControl-root .MuiFormLabel-root{ color: rgba(104, 104, 104, 0.5); }
 .form-control.MuiFormControl-root .MuiInputBase-root{ width: 100%; }
 .form-control.MuiFormControl-root .MuiInputBase-root textarea.MuiInputBase-input{ height: 63px; }
@@ -148,6 +148,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{ opacity: 0;-webkit-appear
 
 .MuiFormControl-root.form-control.with-outlined-button .MuiOutlinedInput-adornedEnd{ padding-right: 10px; }
 .MuiFormControl-root.form-control.with-outlined-button .MuiOutlinedInput-adornedEnd .MuiInputAdornment-root .upload-outline-btn .MuiButton-outlinedPrimary{ padding: 7px 14px!important; }
+
+/* completed form control */
+.form-control.completed .MuiInputBase-root{ background: url('../images/circular-check.svg') no-repeat right 12px center; background-size: 34px 34px; }
+.form-control.completed .MuiInputBase-root .MuiInputBase-input{ padding-right: 60px; }
 
 /* Mat Menu */
 .MuiPopover-root.primary-menu .MuiMenu-paper.MuiPopover-paper{ margin-top: 40px; min-width: 130px; border-radius: 8px; box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.09); background-color: #ffffff; }
@@ -586,7 +590,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     footer .primary-footer .footer-links li{ margin: 2px 12px 2px 0; } 
     footer .secondary-footer .social-links{ justify-content: center; }
 
-    .add-profile-stepper-wrapper .MuiBox-root{ min-width: calc(100% - 60px); }
+    .add-profile-stepper-wrapper .MuiTabs-root.add-profile-stepper.MuiTabs-vertical, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ min-width: 60px; max-width: 60px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root, .add-profile-stepper-wrapper .tab-main-content .MuiButton-containedPrimary{ width: 237px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 4px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ width: 40px; height: 40px; min-height: 40px; margin-bottom: 10px; }
@@ -604,7 +608,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic .MuiButton-outlinedPrimary{ padding: 4px 12px!important; }
 
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ width: 20px; height: 20px; }
-    .add-profile-stepper-wrapper .MuiTabs-root div .MuiBox-root{ min-width: calc(100% - 60px); }
+    /* .add-profile-stepper-wrapper .MuiTabs-root div > .MuiBox-root{ min-width: calc(100% - 60px); } */
 
     .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root + .MuiToggleButton-root{ margin-left: 10px; }
     .added-skills li{ margin: 0 8px 8px 0; }

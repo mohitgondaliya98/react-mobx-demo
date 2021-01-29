@@ -110,7 +110,7 @@ export default function AddProfile() {
                                 </div>
                             } {...a11yProps(0)} />
                             <Tab label={
-                                <div className="tab-step completed">
+                                <div className="tab-step">
                                     <i>
                                         <img className="default" src={require('../../assets/images/qualification-grey.svg').default} alt="" />
                                         <img className="active" src={require('../../assets/images/qualification-primary.svg').default} alt="" />
@@ -244,7 +244,7 @@ export default function AddProfile() {
                                 </div>
                                 <div className="tab-main-content">
                                     <Autocomplete
-                                        className="form-control autocomplete-control"
+                                        className="form-control autocomplete-control completed"
                                         freeSolo
                                         options={skills.map((option) => option.title)}
                                         renderInput={(params) => (
