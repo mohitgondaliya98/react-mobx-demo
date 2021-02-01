@@ -303,7 +303,7 @@ footer .secondary-footer .social-links li a:hover{ color: #302d89; }
 /* Why People Love Hubura */
 .why-people-love{ text-align: center; margin-top: -60px; padding: 60px 0 125px; overflow: hidden; }
 .how-habura-work-slider.slick-slider .slick-list{ overflow: visible; }
-.how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -30px; }
+.how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -15px; }
 
 .how-habura-work-slider.slick-slider .slick-next, .how-habura-work-slider.slick-slider .slick-prev{ display: none!important; }
 .how-habura-work-slider.slick-slider .slick-dots{ left: -60px; }

@@ -23,15 +23,15 @@ export default class App extends React.Component<{}, {}> {
 
 
   render() {
-    
+
     return (
       <>
         <Router>
           <Switch>
-            <Route exact path="/" component={(props: any) => <HomePage />} />
-            <Route exact path="/privacy-policy" component={(props: any) => <Privacy />} />
-            <Route exact path="/term-and-condition" component={(props: any) => <TermCondition />} />
-            <Route exact path="/add-profile" component={(props: any) => <AddProfile />} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={(props: any) => <HomePage />} />
+            <Route exact path={`${process.env.PUBLIC_URL}/privacy-policy`} component={(props: any) => <Privacy />} />
+            <Route exact path={`${process.env.PUBLIC_URL}/term-and-condition`} component={(props: any) => <TermCondition />} />
+            <Route exact path={`${process.env.PUBLIC_URL}/add-profile`} component={(props: any) => <AddProfile />} />
           </Switch>
         </Router>
       </>

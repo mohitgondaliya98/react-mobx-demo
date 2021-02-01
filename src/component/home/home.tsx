@@ -56,7 +56,7 @@ export class home extends Component {
             <div className="px-0">
               <div className="row">
                 <div className="col">
-                  <a href="/" className="nav-brand" title="Hubura">
+                  <a href={`${process.env.PUBLIC_URL}/`} className="nav-brand" title="Hubura">
                     <img src={require('../../assets/images/logo.svg').default} alt="" />
                   </a>
                 </div>
@@ -490,17 +490,17 @@ export class home extends Component {
           <div className="primary-footer">
             <div className="row">
               <div className="col-sm-auto">
-                <a href="/" className="nav-brand" title="Hubura">
+                <a href={`${process.env.PUBLIC_URL}/`} className="nav-brand" title="Hubura">
                   <img src={require('../../assets/images/logo.svg').default} alt="" />
                 </a>
               </div>
               <div className="col-sm d-flex justify-content-sm-end align-items-center">
                 <ul className="footer-links">
                   <li>
-                    <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
+                    <a href={`${process.env.PUBLIC_URL}/privacy-policy`} title="Privacy Policy">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="/term-and-condition" title="Terms and Conditions">Terms and Conditions</a>
+                    <a href={`${process.env.PUBLIC_URL}/term-and-condition`} title="Terms and Conditions">Terms and Conditions</a>
                   </li>
                   <li>
                     <a href="#" title="Cookie Policy">Cookie Policy</a>
