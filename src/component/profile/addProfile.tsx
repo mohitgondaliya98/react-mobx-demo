@@ -1,20 +1,9 @@
 import React from 'react'
-import { Button, Box, Tabs, Tab, TextField, Chip, IconButton, Menu, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions, FormControl, InputLabel, Select, InputAdornment, FilledInput, OutlinedInput } from '@material-ui/core';
-import { Autocomplete, ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import AddIcon from '@material-ui/icons/Add';
-import CloseIcon from '@material-ui/icons/Close';
+import { Button, Box, Tabs, Tab, } from '@material-ui/core';
 import BasicInformation from './basicInformation';
 import SkillCertification from './skillCertification';
 import PreferredJob from './preferredJobs';
-
-
-// import 'date-fns';
-// import DateFnsUtils from '@date-io/date-fns';
-// import {
-//     MuiPickersUtilsProvider,
-//     KeyboardDatePicker,
-// } from '@material-ui/pickers';
+import { NavLink } from 'react-router-dom';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -202,13 +191,13 @@ export default function AddProfile() {
                         <div className="col-sm d-flex justify-content-sm-end align-items-center">
                             <ul className="footer-links">
                                 <li>
-                                    <a href={`${process.env.PUBLIC_URL}/privacy-policy`} title="Privacy Policy">Privacy Policy</a>
+                                    <NavLink exact to={`${process.env.PUBLIC_URL}/privacy-policy`} title="Privacy Policy">Privacy Policy</NavLink>
                                 </li>
                                 <li>
-                                    <a href={`${process.env.PUBLIC_URL}/term-and-condition`} title="Terms and Conditions">Terms and Conditions</a>
+                                    <NavLink exact to={`${process.env.PUBLIC_URL}/term-and-condition`} title="Terms and Conditions">Terms and Conditions</NavLink>
                                 </li>
                                 <li>
-                                    <a href="#" title="Cookie Policy">Cookie Policy</a>
+                                    <NavLink exact to={`${process.env.PUBLIC_URL}/`} title="Cookie Policy">Cookie Policy</NavLink>
                                 </li>
                             </ul>
                         </div>

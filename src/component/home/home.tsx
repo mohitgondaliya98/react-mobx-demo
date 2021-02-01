@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
-import { FormControl, MenuItem, Select } from '@material-ui/core';
+import { FormControl, MenuItem, Select, Link } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
 import AOS from 'aos';
 import { gsap } from "gsap";
 import { Tween, Reveal } from "react-gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import Slider from "react-slick";
+import { NavLink } from 'react-router-dom';
+
 
 export class home extends Component {
 
@@ -497,13 +499,13 @@ export class home extends Component {
               <div className="col-sm d-flex justify-content-sm-end align-items-center">
                 <ul className="footer-links">
                   <li>
-                    <a href={`${process.env.PUBLIC_URL}/privacy-policy`} title="Privacy Policy">Privacy Policy</a>
+                    <NavLink exact to={`${process.env.PUBLIC_URL}/privacy-policy`} title="Privacy Policy">Privacy Policy</NavLink>
                   </li>
                   <li>
-                    <a href={`${process.env.PUBLIC_URL}/term-and-condition`} title="Terms and Conditions">Terms and Conditions</a>
+                    <NavLink exact to={`${process.env.PUBLIC_URL}/term-and-condition`} title="Terms and Conditions">Terms and Conditions</NavLink>
                   </li>
                   <li>
-                    <a href="#" title="Cookie Policy">Cookie Policy</a>
+                    <NavLink exact to={`${process.env.PUBLIC_URL}/add-profile`} title="Cookie Policy">Cookie Policy</NavLink>
                   </li>
                 </ul>
               </div>

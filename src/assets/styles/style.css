@@ -234,6 +234,7 @@ header{ padding: 15px 35px; }
 header .nav-brand{ display: inline-block; vertical-align: top; }
 header .nav-brand img{ display: inline-block; vertical-align: top; width: 136px; height: 38px; }
 header .right-handle button{ height: 40px; }
+header .right-handle .MuiButton-outlinedPrimary{ padding: 8px 20px!important; }
 
 /* Footer
 --------------------------------------------------------------------------------------------------------*/
@@ -436,7 +437,6 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 
     .why-people-love{ padding: 0 15px 80px; margin-top: 0; }
     .how-habura-work-slider.slick-slider .slick-dots{ left: 0; }
-    .how-habura-work-slider.slick-slider .slick-list .slick-track{ margin-left: -30px; }
 
     .how-habura-work, .hot-jobs-wrapper{ margin: 0 0 40px; }
     

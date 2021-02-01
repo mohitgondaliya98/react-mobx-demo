@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
+import { NavLink } from 'react-router-dom';
+
 
 export class privacyPolicy extends Component {
     render() {
@@ -90,13 +92,13 @@ export class privacyPolicy extends Component {
                             <div className="col-sm d-flex justify-content-sm-end align-items-center">
                                 <ul className="footer-links">
                                     <li>
-                                        <a href={`${process.env.PUBLIC_URL}/privacy-policy`} title="Privacy Policy">Privacy Policy</a>
+                                        <NavLink exact to={`${process.env.PUBLIC_URL}/privacy-policy`} title="Privacy Policy">Privacy Policy</NavLink>
                                     </li>
                                     <li>
-                                        <a href={`${process.env.PUBLIC_URL}/term-and-condition`} title="Terms and Conditions">Terms and Conditions</a>
+                                        <NavLink exact to={`${process.env.PUBLIC_URL}/term-and-condition`} title="Terms and Conditions">Terms and Conditions</NavLink>
                                     </li>
                                     <li>
-                                        <a href="#" title="Cookie Policy">Cookie Policy</a>
+                                        <NavLink exact to={`${process.env.PUBLIC_URL}/`} title="Cookie Policy">Cookie Policy</NavLink>
                                     </li>
                                 </ul>
                             </div>
