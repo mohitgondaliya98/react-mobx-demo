@@ -73,7 +73,7 @@ select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
 option:not(:checked) { color: black; }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; margin: 0;  }
-input[type="date"]::-webkit-calendar-picker-indicator{ opacity: 0;-webkit-appearance: none; -moz-appearance: none; appearance: none; margin: 0;  }
+input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0; -webkit-appearance: none; }
 
 
 .bold{font-weight: 700;}
@@ -135,6 +135,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{ opacity: 0;-webkit-appear
 .form-control.MuiFormControl-root .MuiInputBase-root{ width: 100%; }
 .form-control.MuiFormControl-root .MuiInputBase-root textarea.MuiInputBase-input{ height: 63px; }
 
+.form-control.MuiFormControl-root .MuiInputBase-root .MuiSelect-select:focus{ background: none!important; }
+.form-control.MuiFormControl-root .MuiSelect-icon{ background: url('../images/chevron-down-dark.svg') no-repeat center; background-size: 16px 16px; transition: all 0.2s ease-in-out; }
+.form-control.MuiFormControl-root .MuiSelect-icon path{ display: none; }
+.form-control.MuiFormControl-root .MuiSelect-selectMenu{ min-height: auto; }
 
 .form-control.MuiAutocomplete-root{ display: block; width: 100%; margin-bottom: 20px; }
 
@@ -152,6 +156,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{ opacity: 0;-webkit-appear
 /* completed form control */
 .form-control.completed .MuiInputBase-root{ background: url('../images/circular-check.svg') no-repeat right 12px center; background-size: 34px 34px; }
 .form-control.completed .MuiInputBase-root .MuiInputBase-input{ padding-right: 60px; }
+.form-control.completed .MuiAutocomplete-endAdornment .MuiAutocomplete-clearIndicator{ opacity: 0; visibility: hidden; }
 
 /* Mat Menu */
 .MuiPopover-root.primary-menu .MuiMenu-paper.MuiPopover-paper{ margin-top: 40px; min-width: 130px; border-radius: 8px; box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.09); background-color: #ffffff; }
@@ -178,29 +183,31 @@ input[type="date"]::-webkit-calendar-picker-indicator{ opacity: 0;-webkit-appear
 .radio-group{ margin-bottom: 20px; }
 .radio-group label{ font-size: 16px; line-height: 20px; color: #686868; display: block; margin-bottom: 8px; }
 
+/* Checkbox */
+.MuiFormControlLabel-root, .MuiFormControlLabel-root { margin: 0 36px 10px 0; display: inline-block; vertical-align: top; }
+.custom-check.MuiCheckbox-root, .custom-radio.MuiRadio-root{ color: #767676; padding: 0; width: 22px;height: 22px;}
+.custom-check.MuiCheckbox-root + .MuiFormControlLabel-label, .custom-radio.MuiRadio-root + .MuiFormControlLabel-label{ padding-left: 4px;font-size: 16px; line-height: 22px; color: #444444;display: inline-block;
+    vertical-align: middle; } 
+.MuiIconButton-colorPrimary.Mui-checked{ color: #110f57!important; }
 
+/* Primary checkbox */
+.primary-checkbox.form-control{ margin-bottom: 20px; display: block; }
+.primary-checkbox .primary-checkbox-label{ position: relative; padding-left: 28px; cursor: pointer; color: #686868; font-size: 14px; line-height: 22px; }
+.primary-checkbox .primary-checkbox-label::before{ width: 15px; height: 15px; border: 1px solid #e7e4f1; }
+.primary-checkbox .primary-checkbox-label::after{ width: 17px; height: 17px; background-image: url('../images/primary-check-white.svg'); background-position: center; background-repeat: no-repeat; background-size: 9px 10px; background-color: #110f57; }
+.primary-checkbox .primary-checkbox-label::before, .primary-checkbox .primary-checkbox-label::after { content: ""; display: inline-block; vertical-align: middle; border-radius: 4px; top: 0; left: 0; position: absolute; transition: all .2s cubic-bezier(0.35, 0, 0.25, 1); }
+.primary-checkbox .primary-checkbox-input{ display: none; }
+.primary-checkbox .primary-checkbox-label::after { opacity: 0; visibility: hidden; transform: scale(0.4); color: #fff; border-color: #110f57; background-color: #110f57; }
+.primary-checkbox .primary-checkbox-input:checked~.primary-checkbox-label::after{ opacity: 1; visibility: visible; transform: scale(1); }
+.primary-checkbox .primary-control-input:focus~.primary-checkbox-label::before{ box-shadow: 0 0 6px rgba(53, 41, 92, 0.30); border-color: #110f57; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* form control group */
+.form-control-group{ display: block; }
+.form-control-group-label{ font-family: ProximaNova-Semibold; font-weight: 600; display: block; font-size: 14px; line-height: 18px; margin-bottom: 8px; }
 
 
 /* primary-modal */
-.MuiDialog-root.primary-modal .MuiDialog-container .MuiDialog-paperWidthSm{ max-width: 440px; }
-
+.MuiDialog-root.primary-modal .MuiDialog-container .MuiDialog-paperWidthSm{ max-width: 440px; min-width: 290px; }
 .MuiBackdrop-root{ background-color: rgba(0, 0, 0, 0.55);}
 .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root{ background: #FFF; box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.24); border-radius: 8px; margin: 15px; }
 .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paperFullWidth{ width: calc(100% - 30px); }
@@ -212,11 +219,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{ opacity: 0;-webkit-appear
 .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root .MuiTypography-root .MuiIconButton-root{ padding: 6px; font-size: 16px; color: #110f57; margin-right: -8px; }
 
 .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogContent-root{ padding: 0 40px; overflow: visible; }
-
 .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogActions-root{ padding: 0 40px 40px; }
 .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogActions-root .MuiButtonBase-root{ width: 50%; }
-
-
 
 /* Wrapper
 --------------------------------------------------------------------------------------------------------*/
@@ -362,7 +366,6 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 
 /* add-profile-stepper */
 .add-profile-stepper-wrapper { display: flex; align-items: flex-start; padding: 0 35px; }
-/* .add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 286px); } */
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ opacity: 1; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ display: flex; align-items: center; border: 1px solid #dadce0; position: relative; border-radius: 6px; padding: 22px 25px;min-width: 228px; max-width: 228px; overflow: hidden; }
 .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step.completed{ border: 1px solid #009fff; }
@@ -396,7 +399,8 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 
 .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic div > span{ display: block; font-size: 14px; line-height: 19px; color: #838e9b; margin-top: 6px; }
 
-.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root, .add-profile-stepper-wrapper .tab-main-content  .MuiButton-containedPrimary{ width: 360px; }
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control-group, .add-profile-stepper-wrapper .tab-main-content  .MuiButton-containedPrimary{ width: 360px; }
+.add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control-group .form-control{ width: auto; }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root + .MuiToggleButton-root{ margin-left: 12px; }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root { border: 1px solid #e7e4f1; border-radius: 10px; }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root{ display: flex; justify-content: center; align-items: center; width: 54px; height: 54px; padding: 0 11px; }
@@ -406,8 +410,8 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root.Mui-selected .MuiToggleButton-label .default, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root:hover .MuiToggleButton-label .default, .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root .MuiToggleButton-label .active{ opacity: 0; visibility: hidden; transform: scale(0); }
 .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root.Mui-selected{ background: rgba(17, 15, 87, 0.1); border-color: transparent; }
 
-.added-skills { display: block; margin: 12px 0; max-width: 360px; }
-.added-skills li{ display: inline-block; vertical-align: top; margin: 0 12px 12px 0; }
+.chips-group { display: block; margin: 12px 0; max-width: 360px; }
+.chips-group li{ display: inline-block; vertical-align: top; margin: 0 12px 12px 0; }
 
 .certification-wrapper{ display: block; }
 .certification-wrapper li .certification-card{ max-width: 360px; margin-bottom: 15px; display: block; background-color: rgba(153, 152, 205, 0.1); border-radius: 8px; padding: 15px; }
@@ -417,8 +421,9 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 .certification-wrapper li .certification-card .certification-title{ font-size: 16px; line-height: 20px; font-family: ProximaNova-Semibold; font-weight: 600; padding-bottom: 4px; }
 .certification-wrapper li .certification-card .certification-from{ color: #060606; font-size: 14px; line-height: 18px; }
 
-/* .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label{ } */
 .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label span{ text-transform: none; font-size: 16px; line-height: 20px; }
+
+
 
 /* Responsive Media Queries
 --------------------------------------------------------------------------------------------------------*/
@@ -453,7 +458,6 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .hot-job-card .organization-details div h6{ font-size: 18px; line-height: 22px; }
     .hot-job-card .organization-details div span{ font-size: 16px; line-height: 20px; }
     .hot-job-card .job-description{ font-size: 15px; line-height: 24px; height: auto; padding-bottom: 30px; }
-    /* .hot-job-card .MuiButton-outlinedPrimary .MuiButton-label{ padding: 5px 0; } */
 
     p.colored-info{ margin: 20px 0; padding: 15px 20px; line-height: 24px; }
     .main-content{ padding: 50px 0; }
@@ -487,10 +491,7 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 12px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i{ margin-right: 0; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ width: 24px; height: 24px; }
-    /* .add-profile-stepper-wrapper .MuiTabs-root + div{ min-width: calc(100% - 100px); } */
-
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic .MuiButton-outlinedPrimary{ padding: 6px 12px!important; }
-
 
     .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root{ padding: 24px; }
     .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogContent-root{ padding: 0 24px; }
@@ -556,7 +557,6 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .certification-wrapper li .certification-card{ padding: 10px; }
 
     .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary{ height: auto; padding: 9px 12px!important; }
-    /* .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label{ padding: 7px 14px; } */
     .add-profile-stepper-wrapper .add-profile-tab-content .tab-main-content .btn-iconic-text.MuiButton-outlinedPrimary .MuiButton-label span{ font-size: 14px; line-height: 18px; }
 
     .MuiDialog-root.primary-modal .MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root .MuiTypography-root h6{ font-size: 20px; line-height: 24px; }
@@ -591,7 +591,9 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     footer .secondary-footer .social-links{ justify-content: center; }
 
     .add-profile-stepper-wrapper .MuiTabs-root.add-profile-stepper.MuiTabs-vertical, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable{ min-width: 60px; max-width: 60px; }
-    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control .MuiInputBase-root, .add-profile-stepper-wrapper .tab-main-content .MuiButton-containedPrimary{ width: 237px; }
+    .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control, .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .form-control-group, .add-profile-stepper-wrapper .tab-main-content .MuiButton-containedPrimary{ width: auto; max-width: 100%; }
+    .add-profile-stepper-wrapper div[role="tabpanel"]{ width: 100%; }
+    .add-profile-stepper-wrapper .tab-main-content .MuiButton-containedPrimary{ width: 100%; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step{ padding: 4px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit{ width: 40px; height: 40px; min-height: 40px; margin-bottom: 10px; }
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit.Mui-selected, .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-textColorInherit:hover{ box-shadow: none; } 
@@ -606,12 +608,10 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
 
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic div > span{ font-size: 12px; line-height: 16px; margin-top: 4px; }
     .add-profile-stepper-wrapper .MuiBox-root .add-profile-tab-content .choose-profile-pic .MuiButton-outlinedPrimary{ padding: 4px 12px!important; }
-
     .add-profile-stepper-wrapper .MuiTabs-vertical .MuiTabs-scrollable .MuiTab-wrapper .tab-step i img{ width: 20px; height: 20px; }
-    /* .add-profile-stepper-wrapper .MuiTabs-root div > .MuiBox-root{ min-width: calc(100% - 60px); } */
 
     .gender-toggle.MuiToggleButtonGroup-root .MuiToggleButton-root + .MuiToggleButton-root{ margin-left: 10px; }
-    .added-skills li{ margin: 0 8px 8px 0; }
+    .chips-group li{ margin: 0 8px 8px 0; }
 
     .MuiChip-root.primary-chips .MuiChip-label{ padding: 6px 10px; }
     .MuiChip-root.primary-chips{ border-radius: 6px; }
@@ -621,12 +621,16 @@ p.colored-info{ margin: 20px 0 70px; text-align: center; padding: 30px 35px; fon
     .form-control.MuiFormControl-root .MuiFormLabel-root{ font-size: 14px; line-height: 18px; transform: translate(16px, 14px) scale(1); }
     .form-control.MuiFormControl-root .MuiFormLabel-root.MuiInputLabel-shrink{ transform: translate(16px, -6px) scale(0.82); }
 
+    .form-control.completed .MuiInputBase-root{ background-size: 24px 24px; }
+
     .autocomplete-control .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input{ padding: 5.5px 7px!important; }
     .autocomplete-control .MuiFormLabel-root{ font-size: 14px; line-height: 18px; transform: translate(16px, 14px) scale(1); }
     .autocomplete-control .MuiFormLabel-root.MuiInputLabel-shrink{ transform: translate(16px, -6px) scale(0.82); }
 
     .radio-group label{ font-size: 14px; line-height: 18px; } 
     .form-control.MuiFormControl-root.have-suffix .MuiInputBase-root{ padding-right: 6px; }
+
+    .autocomplete-control.MuiAutocomplete-root .MuiFormControl-root .MuiFormHelperText-root{ font-size: 12px; line-height: 16px; margin-top: 3px; }
 }
 
 @media (max-width: 425px) {
